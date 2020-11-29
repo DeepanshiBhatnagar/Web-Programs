@@ -1,0 +1,593 @@
+<html  lang="en">
+<head><title>IntraTest1</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/theme1.css">
+
+<link rel="stylesheet" href="css/theme2.css">
+
+<link rel="stylesheet" href="css/theme3.css">
+
+<script src="js/caleandar.js"></script>
+
+<style>
+.ulh{
+ list-style-type: none;
+ width: 100%;
+ height: 40px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-color: #333;
+  display: inline-block;
+  } 
+.ulh2{
+ list-style-type: none;
+  margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: blue;
+  height: 45px;
+  font-size: 12px;
+  }
+ .navb{
+  font-size: 13px; text-decoration: none; color: white; font-weight:bold;
+  }   
+  .container {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: black;
+  color: white;
+ 
+}
+.column {
+  float: left;
+  
+  padding: 10px;
+  height: 800px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.month {
+  padding: 30px 25px;
+  width: 220px;
+  height: 30px;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+  .collapsible
+{
+  background-color: #005c99;
+  color: white;
+  border: 1px;
+  width:250px;
+  cursor: pointer;
+  padding: 5px;
+  text-align: left;
+  font-size: 13px;
+  margin: 0px 0;
+  font-weight:bold;
+}
+
+.active, .collapsible:hover
+{
+  background-color: #004466;
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color:  #004280;
+  align: left;
+  
+}
+.cont { 
+  width:160px;
+  border: 0px solid red;
+  margin: 0px 0
+  cursor: pointer;
+  text-align: left;
+  font-size: 15px;
+  color:white;
+  font-style:bold;
+  background:  #006699;
+  text-decoration:none;
+}
+.cont:hover {
+  background-color:  #b3b3ff;
+}
+  
+  
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  margin-left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  margin-top: 0;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+.search-container {
+  margin-top: 8px;
+  margin-right: 40px;
+  float: right;
+}
+
+ .search-container button {
+  float: right;
+  margin-top: 1px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  height: 22px;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    float: none;
+  }
+
+</style>
+
+</head>
+<body  style="background: #ffe7e9 url("https://images.unsplash.com/photo-1456271390536-693558280c8f?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=996&q=80&cs=tinysrgb") no-repeat center center fixed;">
+<table width="90%" height="1000px" align="center" style="border: 0px solid white; background-color: white;   border-spacing: 0px; border-radius: 15px; position: sticky;  top: 0;" cellspacing="0" >
+<tr><td  width="1000px" valign="top" style="border: 0px solid; background-color: white;  border-radius: 15px; margin-top:0px;">
+<div class="ulh" width="80%">
+   <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <table>
+    <tr>
+    <td style="background-color: #111; margin-top:100px;" valign="top">
+	    <button type="button" class="collapsible">STPI</button>
+      
+        <div class="content">
+         <a  style="text-decoration:none;"href="http://164.164.240.39/HOMEPAGE/stpi/qul_policy.html?sm=b"><p  class="cont" style="margin: 0px 0">Quality Policy</p></a>
+		 <a  style="text-decoration:none;" href="http://164.164.240.39/HOMEPAGE/stpi/Qual_Objectives.html?sm=c"><p  class="cont" style="margin: 0px 0">Objective</p></a>
+		 <a  style="text-decoration:none;" href="http://164.164.240.39/HOMEPAGE/stpi/sec_policy.html?sm=sec"><p  class="cont" style="margin: 0px 0">Security Policy</p></a>
+		 <a  style="text-decoration:none;" href="http://164.164.240.39/HOMEPAGE/stpi/sec_Objectives.html?sm=sec1"><p  class="cont"  style="margin: 0px 0">Security Objectives</p></a>
+		 <a  style="text-decoration:none;" href="http://164.164.240.39/HOMEPAGE/stpi/vision.html?sm=d"><p  class="cont" style="margin: 0px 0">Vision</p></a>
+		 <a  style="text-decoration:none;" href="http://164.164.240.39/HOMEPAGE/stpi/mission.html?sm=e"><p  class="cont" style="margin: 0px 0">Mission</p></a>
+		 <a  style="text-decoration:none;" href="http://164.164.240.39/HOMEPAGE/stpi/values.html?sm=f"><p  class="cont" style="margin: 0px 0">Values</p></a>
+        </div>
+    
+        <button type="button" class="collapsible">Policies</button>
+        <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/utilities/hrguide.pdf?sm=g"><p  class="cont"  style="margin: 0px 0">HR Policy</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/Hospitals.Pdf?sm=h"><p  class="cont"   style="margin: 0px 0">List of Hospitals</p></a>
+		  <a style="text-decoration:none;" href="http://164.164.240.39/utilities/leavetravelconcession.pdf?sm=i"><p  class="cont"   style="margin: 0px 0">LTC</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/vghday.idc?sm=j"><p  class="cont"   style="margin: 0px 0">List of Holidays</p></a>
+        </div>
+      
+        <button type="button" class="collapsible">Noting and Drafting</button>
+      <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/utilities/NotingsHQ.pdf?sm=g1"><p  class="cont"  style="margin: 0px 0">Noting PDF</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/NotingsHQ.doc?sm=h1"><p  class="cont"  style="margin: 0px 0" >Noting DOC</p></a>
+        </div>
+     
+        <button type="button" class="collapsible">Personal/Benefits</button>
+        <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/utilities/eview1.asp?ecode=STPO342&sm=l"><p  class="cont"  style="margin: 0px 0" >Personal Information</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/sixthpayslip.asp?ecode=STPO342&sm=m"><p  class="cont"  style="margin: 0px 0" >Pay Slip</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/changepassword.asp?sm=n"><p  class="cont"  style="margin: 0px 0" >Change Password</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/employee_salary.asp?ecode=STPO342&sm=o"><p  class="cont"  style="margin: 0px 0" >Consolidated Salary</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/loan.html?sm=p"><p  class="cont"  style="margin: 0px 0">Loan</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/claims/misc/index.htm?sm=q"><p  class="cont"  style="margin: 0px 0">Claims</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/leave/source/index.asp?sm=r"><p  class="cont"  style="margin: 0px 0">Leaves</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/pfstat.asp?ecode=STPO342&sm=s"><p  class="cont" style="margin: 0px 0">PF Statement</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/incometax/menu/index.htm?ecode=STPO342&sm=t"><p  class="cont" style="margin: 0px 0" >Income Tax</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/photo/STPO342.htm?sm=u"><p  class="cont"  style="margin: 0px 0">R & A</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/intranetpwdchange/changepassword.asp?sm=v"><p  class="cont"  style="margin: 0px 0">Change Password-Subcenters</p></a>
+        </div>
+      
+        <button type="button" class="collapsible">Internal Info</button>
+      <div class="content">
+        
+          <a style="text-decoration:none;"href="http://164.164.240.39/utilities/emp_display_internel_info.asp?cboorder_type=Circulars&cboyear=A&cbomonth=A&ecode=rs3(ecode)&edept=Server.URLEncode(rs3(edept))&sm=v"><p  class="cont"  style="margin: 0px 0">Circulars</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/emp_display_internel_info.asp?cboorder_type=Office%20Order&cboyear=A&cbomonth=A&ecode=rs3(ecode)&edept=Server.URLEncode(rs3(edept))&sm=w"><p  class="cont"  style="margin: 0px 0">Office Orders</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/emp_display_internel_info.asp?cboorder_type=Meetings&cboyear=A&cbomonth=A&ecode=rs3(ecode)&edept=Server.URLEncode(rs3(edept))&sm=w01"><p  class="cont"   style="margin: 0px 0">Meetings</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/visitorsbook.asp?sm=w03"><p  class="cont" >What Others Say</p></a>
+        </div>
+     
+        <button type="button" class="collapsible">Library</button>
+     
+        <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/library/browse/brows.htm?sm=x"><p  class="cont"  style="margin: 0px 0">Catalogue</p></a>
+        </div>
+     
+        <button type="button" class="collapsible">Directories</button>
+      
+        <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/utilities/emp_details.asp?sm=y"><p  class="cont"  style="margin: 0px 0">Employee</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/visitors/aspfiles/visitors.asp?sm=z"><p  class="cont"  style="margin: 0px 0">Telephone Directory</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/birth_details.asp?sm=k"><p  class="cont"  style="margin: 0px 0">Birthday Details</p></a>
+        </div>
+      
+        <button type="button" class="collapsible">Training</button>
+          <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/Training/TrainingManagementSystem/ASP/mainuser.asp?sm=a1"><p  class="cont"  style="margin: 0px 0">Training</p></a>
+        </div>
+      
+        <button type="button" class="collapsible">Corporate News & info</button>
+      
+        <div class="content">
+          <a style="text-decoration:none;"href="http://www.soft.net/about_pressroom.htm?sm=g1"><p  class="cont"  style="margin: 0px 0">News/Press & Publications</p></a>
+        </div>
+      
+        <button type="button" class="collapsible">Infra & Purchase</button>
+      
+        <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/utilities/vr.idc?sm=h1"><p  class="cont"  style="margin: 0px 0">Vehicle Request</p></a>
+        </div>
+      
+        <button type="button" class="collapsible">Commercial & Purchase</button>
+      
+        <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/inventory/mms/InternalIssue/tab_frameset.html?sm=i1"><p  class="cont" style="margin: 0px 0">Internal Issue</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/inventory/mms/gatepass/tab_frameset.html?sm=j1"><p  class="cont"  style="margin: 0px 0">Gate Pass</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/inventory/Indentforstationary/newindent4.htm?sm=k1"><p  class="cont"  style="margin: 0px 0" >Indent for Stationary</p></a>
+        </div>
+      
+        <button type="button" class="collapsible">IQA</button>
+      <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/ISO-QMS/guide/iso9001.html?sm=l1"><p  class="cont"  style="margin: 0px 0">Standards(ISO9001-1994)</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/ISO-QMS/guide/tips.html?sm=n1"><p  class="cont"  style="margin: 0px 0">Tips for Auditor</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/ISO-QMS/guide/qwork.html?sm=o1"><p  class="cont"  style="margin: 0px 0">Quality @ Work</p></a>
+        </div>
+     
+        <button type="button" class="collapsible">Report/Statistics</button>
+      <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/utilities/statistics/exim/industryinfo.asp?sm=p1"><p  class="cont"  style="margin: 0px 0">Industry Information</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/statistics/hr/hrinfo.asp?sm=s1"><p  class="cont"  style="margin: 0px 0">HR Statics</p></a>
+        </div>
+      
+	  
+        <button type="button" class="collapsible">Tools</button>
+      <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/utilities/company/aspfiles/tab_frameset.html?sm=s2"><p  class="cont"  style="margin: 0px 0">Company Contacts</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/Circulars/tab_frameset.html?sm=s3"><p  class="cont" style="margin: 0px 0" >Internal Info</p></a>
+        </div>
+      
+        <button type="button" class="collapsible">Events</button>
+     <div class="content">
+          <a href="http://164.164.240.39/utilities/Photogallary/page.asp?sm=e1"><p  class="cont"  style="margin: 0px 0">Photo Gallary</p></a>
+        </div>
+     
+        <button type="button" class="collapsible">Downloads</button>
+      <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/utilities/downloads/requirements.doc?sm=t1"><p  class="cont"  style="margin: 0px 0">Software Requirements</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/downloads/MonthlyReport.xls?sm=u1"><p  class="cont"  style="margin: 0px 0">Monthly Report</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/downloads/HrDept.html?sm=v1"><p  class="cont" style="margin: 0px 0" >Personnel Claims</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/IMG/Customer%20Details%20for%20DNS%20and%20Mail%20Services.doc?sm=w1"><p  class="cont"  style="margin: 0px 0">DNS and Mail Services</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/IMG/IMG%20Service%20Request.doc?sm=x1"><p  class="cont" style="margin: 0px 0" >IMG Service Request</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/IMG/User%20Change%20Request.doc?sm=y1"><p  class="cont" style="margin: 0px 0" >User Change Request</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/IMG/User%20Entry-Exit%20Form.doc?sm=z1"><p  class="cont" style="margin: 0px 0" >User Entry-Exit Form</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/Downloads/WebsiteIndent.doc?sm=z11"><p  class="cont" style="margin: 0px 0" >Website Indent Form</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/utilities/Downloads/Intranetaccess.doc?sm=z12"><p  class="cont" style="margin: 0px 0" >Intranet Authorization Form</p></a>
+        </div>
+      
+        <button type="button" class="collapsible">SEZ Download</button>
+      <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/SEZ-PDF/stpi.html?sm=z13"><p  class="cont" style="margin: 0px 0" >SEZ</p></a>
+        </div>
+      
+        <button type="button" class="collapsible">FeedBack</button>
+      <div class="content">
+          <a style="text-decoration:none;"href="http://164.164.240.39/utilities/feedback/feedback.asp?sm=d1"><p  class="cont" style="margin: 0px 0" >Feeback</p></a>
+		  <a style="text-decoration:none;"href="http://164.164.240.39/HomePage/Newhome/indexnew622016.asp?sm=b1"><p  class="cont" style="margin: 0px 0" >Home</p></a>
+        </div>
+      
+  
+	</td></tr>
+	<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</table>
+</div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()"> <span class="glyphicon glyphicon-align-justify"></span></button>  
+<img src="https://tse2.mm.bing.net/th?id=OIP.OERZ8R9ZII84dmXruyMSzwHaEF&pid=Api&P=0&w=282&h=157" width="90px" height="30px" style="float: center; margin-top: 0px;">
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("mySidebar").style.marginLeft ="0";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+   <a style="float: right; margin-right: 12px; margin-top: 8px;" href="#">
+          <span class="glyphicon glyphicon-off"></span>	
+        </a>
+		<a style="float: right; margin-right: 20px; margin-top: 8px;" href="#">
+          <span class="glyphicon glyphicon-home"></span>
+        </a>
+	 <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+</div>
+<div class="ulh2" valign="top">
+<a class="navb" href="http://164.164.240.39/EXIM/misc/enter.idc">EXIM |</a>&nbsp;
+&nbsp;<a class="navb"href="http://164.164.240.39/SEZ/misc/pop.html">SEZ |</a>&nbsp;
+&nbsp;<a class="navb" href="http://blrintranet.soft.net/SoftNet/code/menu/homepage_menu.asp">SOFTNET |</a>&nbsp;
+&nbsp;<a class="navb" href="http://164.164.240.39/pmc/default.aspx">PMC |</a>&nbsp;
+&nbsp;<a class="navb" href="http://164.164.240.39/Incubation/home.aspx">INCUBATION |</a>&nbsp;
+&nbsp;<a class="navb" href="http://164.164.240.39/Exim/skillset/asp_net/skillframe.asp">SKILLSET |</a>&nbsp;
+&nbsp;<a class="navb" href="http://164.164.240.39/salary/misc/default.htm">HRIS |</a>&nbsp;
+&nbsp;<a class="navb" href="http://164.164.240.39/Dispatch/Employees/MyDoc1.asp">Filling & Dispatching |</a>&nbsp;
+&nbsp;<a class="navb" href="http://blrintranet.soft.net/inventory/misc/main.html">Inventory |</a> &nbsp;
+&nbsp;<a class="navb" href="http://blrintranet.soft.net/iso-qms/misc/qmsiso.html">IPMG |</a>&nbsp;
+&nbsp;<a class="navb" href="http://blrintranet.soft.net/utilities/imsmenu/ims.html">IMS |</a>&nbsp;
+&nbsp;<a class="navb" href="http://blrintranet.soft.net/utilities/img-frms/img-frms.asp">IMG |</a>&nbsp;
+&nbsp;<a class="navb" href="http://164.164.240.39/billing/misc/billing.asp">SoftNet Billing |</a>&nbsp;
+&nbsp;<a class="navb" href="http://164.164.240.39/DMA/Misc/main.html">DMA |</a>&nbsp;
+&nbsp;<a class="navb" href="http://164.164.240.39/SDG/ASP/Insert/Start.asp">SDG |</a>&nbsp;
+&nbsp;<a class="navb" href="http://164.164.240.39/reachwell/index.asp">AMC |</a>&nbsp;
+&nbsp;<a class="navb" href="http://164.164.240.39/utilities/cmdbmenu/cmdb.html">CMDB |</a>&nbsp;
+&nbsp;<a class="navb" href="http://164.164.240.39/HomePage/Help/stpi_help.html">HELP </a>
+</div>
+<div class="container">
+  <img src="https://tse1.mm.bing.net/th?id=OIP.xtoLqAptIkOyFBvXHbQAugHaEO&pid=Api&P=0&w=323&h=185" alt="Nature" style="width:100%; height: 120px;  position: relative;">
+  <div class="text-block">
+    <h4 style="font-size: 30px;" >Software Technology Parks of India,Bangalore  </h4>
+    <p>Ministry of Electronics & Information Technology (MeitY), Government of India  </p>
+  </div>
+  <img src="https://tse1.mm.bing.net/th?id=OIP.HXmA9QcwH_ZMLtklU90e1gAAAA&pid=Api&P=0&w=300&h=300" alt="Avatar" style="width:120px; height: 120px; border-radius: 50%; position: absolute;    top: 50%;    right: 5%;">
+
+</div><marquee behavior="scroll" direction="right" width="80%" style="margin-left: 15px;">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.s5WkRgwp7UUYGFhnaqdXgQHaEu&pid=Api&P=0&w=276&h=177" width="120" height="80" alt="Natural" />
+	<img src="http://varasidhielectrotech.com/wp-content/uploads/2019/03/STPI3.jpg" width="120" height="80" alt="Natural" />
+	<img src="https://tse4.mm.bing.net/th?id=OIP.rCb5ThfuTbVqxjpcDhdBYwAAAA&pid=Api&P=0&w=234&h=179" width="120" height="80" alt="Natural" />
+	<img src="http://blrintranet.soft.net/utilities/Photogallery/Farewell/DSC_0009.JPG" width="120" height="80" alt="Natural" />
+	<img src="https://tse2.mm.bing.net/th?id=OIP.MM8xTlJEsV_Kx92oISw5LgHaHa&pid=Api&P=0&w=300&h=300" width="120" height="80" alt="Natural" />
+	<img src="https://tse3.mm.bing.net/th?id=OIP.IuxncB7wKKdksnmEhLmy1gHaFj&pid=Api&P=0&w=229&h=172" width="120" height="80" alt="Natural" />
+	<img src="https://tse3.mm.bing.net/th?id=OIP.hJTh0NQO1436QYFk44Wj_wAAAA&pid=Api&P=0&w=302&h=184" width="120" height="80" alt="Natural" />
+	<img src="https://tse1.mm.bing.net/th?id=OIP.cHceYcMUwqsCruhq3fIMsAHaE8&pid=Api&P=0&w=233&h=156" width="120" height="80" alt="Natural" />
+	<img src="https://tse4.mm.bing.net/th?id=OIP.7PqULUKRrcYb_9eMNHdKqAHaEK&pid=Api&P=0&w=361&h=204" width="120" height="80" alt="Natural" />
+  </marquee>
+  <h5 style="float: right; margin-top: 66px; margin-right: 50px;">Deepanshi Bhatnagar</h5>
+ <div style="margin-top: 15px; margin-left: 20px; margin-right: 20px;"> 
+<div class="row">
+  <div class="column" style="background-color:#aaa; width: 20%;">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#bbb; width: 60%;">
+    <h2>STPI-B Directorate’s Policy</h2>
+<p>The Policy of STPI-B Directorate is to continuously enhance the value to its customers in line to the organization’s Policy by delivering quality performance in its services driven through innovative and Service Management best practices in terms of Confidentiality, Integrity and Availability.</p>
+<h2>STPI-B Directorate’s Objectives</h2>
+<p>To provide statutory and other promotional services to the exporters by implementing Software Technology Parks (STP)/ Electronics and Hardware Technology Parks (EHTP) Schemes and other such schemes which may be formulated and entrusted by the Government from time to time.
+To promote micro, small and medium entrepreneurs by creating conducive environment for entrepreneurship in the field of IT/ITES.
+To provide data communication services including value added services to IT / IT enabled Services (ITES) related industries.
+To promote the development and export of software and software services including Information Technology (IT) enabled services/ Bio-IT
+To fulfill the customer requirements by providing comprehensive quality in its services
+To ensure the continuous availability of its IT Services
+To continually improve the performance of its Services</p>
+  </div>
+  <div class="column" style="background-color:#ccc; width: 20%;">
+<div class="month">      
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      August<br>
+      <span style="font-size:12px">2017</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">  
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+    
+
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,832 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>IntraTest1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/theme1.css">
+
+    <link rel="stylesheet" href="css/theme2.css">
+
+    <link rel="stylesheet" href="css/theme3.css">
+
+    <script src="js/caleandar.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+    <style>
+    .ulh {
+        list-style-type: none;
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        background: url(cropp.jpg);
+        display: inline-block;
+    }
+
+    .ulh2 {
+	
+        list-style-type: none;
+        margin-top: 0px;
+        padding: 0;
+		
+		background-color: #000d1a;
+        overflow: hidden;
+        height: 30px;
+        position: sticky;
+        top: 0;
+        font-size: 12px;
+    }
+	.btn{
+	align: center;
+	background-color:#527a7a;
+	 padding: 3px 3px;
+	}
+
+    .navb {
+        font-size: 15px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  position: relative;
+  max-width: 100%;
+  margin: 5px auto;
+  margin-left: 10px auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content12 {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 800px;
+  padding: 10px;
+}
+       
+    .column {
+	margin:0px;
+        float: left;
+        padding: 10px;
+		background-color: white; 
+        height: 600px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+	
+object,
+iframe,
+blockquote,
+pre,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+q,
+dl,
+dt,
+dd,
+ol,
+fieldset,
+form,
+label,
+legend,
+caption,
+tbody,
+tfoot,
+thead,
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+.anim04c {
+    -webkit-transition: all .4s cubic-bezier(.5, .35, .15, 1.4);
+    transition: all .4s cubic-bezier(.5, .35, .15, 1.4);
+}
+
+.outer {
+    position: relative;
+    top: 10%;
+    z-index: 1;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+/*-----*/
+
+.signboard {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    color: #fff;
+    border-radius: 10px;
+}
+/*-----*/
+
+.front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: #ff6666;
+    text-align: center;
+}
+.right {
+    position: absolute;
+    right: : 0;
+    z-index: 2;
+    -webkit-transform: rotate(-10deg) translate(7px, 8px);
+    -moz-transform: rotate(-10deg) translate(7px, 8px);
+    -ms-transform: rotate(-10deg) translate(7px, 8px);
+    -o-transform: rotate(-10deg) translate(7px, 8px);
+    transform: rotate(-10deg) translate(7px, 8px);
+    background: #EFC94C;
+}
+.left {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    -webkit-transform: rotate(5deg) translate(-4px, 4px);
+    -moz-transform: rotate(5deg) translate(-4px, 4px);
+    -ms-transform: rotate(5deg) translate(-4px, 4px);
+    -o-transform: rotate(5deg) translate(-4px, 4px);
+    transform: rotate(5deg) translate(-4px, 4px);
+    background: #3498DB;
+}
+/*-----*/
+
+.outer:hover .inner {
+    -webkit-transform: rotate(0) translate(0);
+    -moz-transform: rotate(0) translate(0);
+    -ms-transform: rotate(0) translate(0);
+    -o-transform: rotate(0) translate(0);
+    transform: rotate(0) translate(0);
+}
+/*-----*/
+
+.outer:active .inner {
+    -webkit-transform: rotate(0) translate(0) scale(0.9);
+    -moz-transform: rotate(0) translate(0) scale(0.9);
+    -ms-transform: rotate(0) translate(0) scale(0.9);
+    -o-transform: rotate(0) translate(0) scale(0.9);
+    transform: rotate(0) translate(0) scale(0.9);
+}
+.outer:active .front .date {
+    -webkit-transform: scale(2);
+}
+.outer:active .front .day,
+.outer:active .front .month {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.outer:active .right {
+    -webkit-transform: rotate(-5deg) translateX(80px) scale(0.9);
+    -moz-transform: rotate(-5deg) translateX(80px) scale(0.9);
+    -ms-transform: rotate(-5deg) translateX(80px) scale(0.9);
+    -o-transform: rotate(-5deg) translateX(80px) scale(0.9);
+    transform: rotate(-5deg) translateX(80px) scale(0.9);
+}
+.outer:active .left {
+    -webkit-transform: rotate(5deg) translateX(-80px) scale(0.9);
+    -moz-transform: rotate(5deg) translateX(-80px) scale(0.9);
+    -ms-transform: rotate(5deg) translateX(-80px) scale(0.9);
+    -o-transform: rotate(5deg) translateX(-80px) scale(0.9);
+    transform: rotate(5deg) translateX(-80px) scale(0.9);
+}
+/*-----*/
+
+.outer:active .calendarMain {
+    -webkit-transform: scale(1.8);
+    opacity: 0;
+    visibility: hidden;
+}
+.outer:active .clock {
+    -webkit-transform: scale(1.4);
+    opacity: 1;
+    visibility: visible;
+}
+.outer:active .calendarNormal {
+    bottom: -30px;
+    opacity: 1;
+    visibility: visible;
+}
+.outer:active .year {
+    top: -30px;
+    opacity: 1;
+    visibility: visible;
+    letter-spacing: 3px;
+}
+/*-----*/
+
+.calendarMain {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+}
+.month,
+.day {
+    font-size: 10px;
+    line-height: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.date {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.clock {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 20px;
+    line-height: 100px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.year {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    color: #ff726b;
+}
+.calendarNormal {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.date2 {
+    color: #ff726b;
+}
+.day2 {
+    color: #3498DB;
+}
+.month2 {
+    color: #EFC94C;
+}
+.hover,
+.click,
+.yeaa {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    bottom: 0;
+    opacity: 1;
+}
+
+.glow
+ {
+  font-size: 35px;
+  font-family: Edwardian Script ITC; 
+  font-wieght: bold; 
+  color: #fff;
+  text-shadow: 0 1 8px  #ff00bf;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow 
+{
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+ .footer {  
+   margin-top: 0;
+   width: 100%;
+   background-color: #00394d;
+   color: white;
+   text-align: center;
+}
+
+    .collapsible {
+        background-color: #111;
+        color: white;
+        border: 1px;
+		border-left-radius: 15px;
+        width: 250px;
+        cursor: pointer;
+        padding: 5px;
+        text-align: left;
+        font-size: 14px;
+        margin: 0px 0;
+        font-weight: bold;
+    }
+
+        .active, .collapsible:hover {
+            background-color: #00264d;
+        }
+
+    .content {
+        display: none;
+        overflow: hidden;
+        background-color: #111;
+        align: left;
+		padding: 0px;
+    }
+
+    .cont {
+		padding: 0px;
+        width: 150px;
+        margin: 0px 0; cursor: pointer;
+        text-align: left;
+        font-size: 13px;
+        color: white;
+        font-style: bold;
+        background: #111;
+		text-size:13px;
+        text-decoration: none;
+    }
+
+        .cont:hover {
+            background-color: #b3b3ff;
+        }
+
+
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        margin-left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+            .sidebar a:hover {
+                color: #f1f1f1;
+            }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+    .openbtn {
+        font-size: 12px;
+        margin-left: 10px;
+        margin-top: 8px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+    }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+    #main {
+        transition: margin-left .5s;
+        margin-top: 0;
+    }
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+        .sidebar {
+            padding-top: 15px;
+        }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+    }
+
+    .search-container {
+        margin-top: 8px;
+        margin-right: 40px;
+        float: right;
+    }
+
+        .search-container button {
+            float: right;
+            margin-top: 1px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+            height: 24px;
+        }
+
+            .search-container button:hover {
+                background: #ccc;
+            }
+
+    @media screen and (max-width: 600px) {
+        .search-container {
+            float: none;
+        }
+		
+	        </style > </head >
+ <body background="gray-point-background.jpg" style=" position: sticky;">
+ <table width="90%" align="center" style="border-spacing: 0px; border-radius: 15px; position: sticky;  top: 0;" cellspacing="0" >
+ <tr > <td width="1000px" valign="top" style=" border: 0px solid; background-color: #003366; border-radius: 15px; margin-top: 0px;" >
+ <div class="ulh" width="80%" >
+      <div id="mySidebar" class="sidebar"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" > ×</a >
+ <table> <tr > <td style="background-color: #111; margin-top:100px;" valign="top" >
+          <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2019-02/13/full/1550069994-6325.jpg" width="110px" height="50px" align="center" style="margin-left:60px">
+      <button type="button" class="collapsible" > STPI</button >
+      <div class="content" >
+	  <a href="http://blrintranet.soft.net/HOMEPAGE/stpi/MOA-CBS.pdf?sm=a2" > <p class="cont"> MOA of CBS</p></a >
+	  <a href="http://blrintranet.soft.net/HOMEPAGE/stpi/RCBS.pdf?sm=a3" ><p class="cont"  > Rules for CBS</p > </a >
+      <a href="http://164.164.240.39/HOMEPAGE/stpi/qul_policy.html?sm=b" > <p class="cont" > Quality Policy</p > </a >
+      <a href="http://164.164.240.39/HOMEPAGE/stpi/sec_policy.html?sm=sec" > <p class="cont"  > Security Policy</p > </a >
+      <a href="http://164.164.240.39/HOMEPAGE/stpi/vision.html?sm=d" > <p class="cont" > Vision</p > </a > 
+      <a href="http://164.164.240.39/HOMEPAGE/stpi/mission.html?sm=e" > <p class="cont" > Mission</p > </a >
+      <a href="http://164.164.240.39/HOMEPAGE/stpi/values.html?sm=f" > <p class="cont"  > Values</p > </a >
+       </div >
+     
+      <button type="button" class="collapsible" > Holiday List</button > 
+     <div class="content" >
+      <a href="http://blrintranet.soft.net/utilities/HolidayList2020.pdf?sm=j" > <p class="cont" style="margin: 0px 0" > List of Holidays 2020</p > </a >
+      <a href="http://blrintranet.soft.net/utilities/OfficeOrder2-12-2017.pdf?sm=i" > <p class="cont" style="margin: 0px 0" > Office Order No.58/2017</p > </a > 
+     <a href="http://blrintranet.soft.net/utilities/RH2020list.pdf?sm=g" > <p class="cont" style="margin: 0px 0" >Restricted Holidays 2020 </p > </a > 
+	 <a href="http://blrintranet.soft.net/utilities/Circular05-2018.pdf?sm=K" > <p class="cont" style="margin: 0px 0" > Circular No. 05/2018</p > </a > 
+	 </div >
+	 <button type="button" class="collapsible" >Hindi Notings</button > 
+     <div class="content" >
+      <a style="text-decoration:none;"href="http://blrintranet.soft.net/utilities/NotingsHQ.pdf?sm=g1" > <p class="cont" style="margin: 0px 0" >Hindi Notings </p > </a > 
+  
+      </div >
+      <button type="button" class="collapsible" > Personal/Benefits</button >
+      <div class="content" > 
+     <a href="http://164.164.240.39/utilities/eview1.asp?ecode=STPO342&sm=l" > <p class="cont" style="margin: 0px 0" > Personal Information</p > </a >
+      <a href="http://164.164.240.39/utilities/sixthpayslip.asp?ecode=STPO342&sm=m" > <p class="cont" style="margin: 0px 0" > Pay Slip</p > </a >
+	  <a href="http://164.164.240.39/utilities/changepassword.asp?sm=n" > <p class="cont" style="margin: 0px 0" > Change Password</p > </a > 
+     <a href="http://164.164.240.39/utilities/employee_salary.asp?ecode=STPO342&sm=o" > <p class="cont" style="margin: 0px 0" > Consolidated Salary</p > </a >
+      <a href="http://164.164.240.39/utilities/loan.html?sm=p" > <p class="cont" style="margin: 0px 0" > Loan</p > </a >
+      <a href="http://164.164.240.39/utilities/claims/misc/index.htm?sm=q" > <p class="cont" style="margin: 0px 0" > Claims</p > </a >
+      <a href="http://164.164.240.39/utilities/leave/source/index.asp?sm=r" > <p class="cont" style="margin: 0px 0" > Leaves</p > </a > 
+     <a href="http://164.164.240.39/utilities/pfstat.asp?ecode=STPO342&sm=s" > <p class="cont" style="margin: 0px 0" > PF Statement</p ></a >
+      <a href="http://164.164.240.39/utilities/incometax/menu/index.htm?ecode=STPO342&sm=t" > <p class="cont" style="margin: 0px 0" > Income Tax</p > </a >
+      <a href="http://164.164.240.39/utilities/photo/STPO342.htm?sm=u" > <p class="cont" style="margin: 0px 0" > R & A</p > </a >
+      </div >
+      <button type="button" class="collapsible" > Internal Info</button >
+      <div class="content" >
+      <a href="http://164.164.240.39/utilities/emp_display_internel_info.asp?cboorder_type=Circulars&cboyear=A&cbomonth=A&ecode=rs3(ecode)&edept=Server.URLEncode(rs3(edept))&sm=v" > <p class="cont" style="margin: 0px 0" > Circulars</p > </a > 
+     <a href="http://164.164.240.39/utilities/emp_display_internel_info.asp?cboorder_type=Office%20Order&cboyear=A&cbomonth=A&ecode=rs3(ecode)&edept=Server.URLEncode(rs3(edept))&sm=w" > <p class="cont" style="margin: 0px 0" > Office Orders</p > </a > 
+	 <a href="http://164.164.240.39/utilities/emp_display_internel_info.asp?cboorder_type=Meetings&cboyear=A&cbomonth=A&ecode=rs3(ecode)&edept=Server.URLEncode(rs3(edept))&sm=w01" > <p class="cont" style="margin: 0px 0" > Meetings</p > </a >
+      <a href="http://164.164.240.39/utilities/visitorsbook.asp?sm=w03" > <p class="cont" > What Others Say</p > </a >
+      </div >
+      <button type="button" class="collapsible" > Library</button >
+      <div class="content" > 
+     <a style="text-decoration:none;"href="http://164.164.240.39/library/browse/brows.htm?sm=x" > <p class="cont" style="margin: 0px 0" > Catalogue</p > </a >
+       </div >
+      <button type="button" class="collapsible" > Directories</button >
+      <div class="content" >
+      <a href="http://164.164.240.39/utilities/emp_details.asp?sm=y" > <p class="cont" style="margin: 0px 0" > Employee</p > </a >
+      <a "href="http://164.164.240.39/utilities/visitors/aspfiles/visitors.asp?sm=z" > <p class="cont" style="margin: 0px 0" > Telephone Directory</p > </a > 
+     <a href="http://164.164.240.39/utilities/birth_details.asp?sm=k" > <p class="cont" style="margin: 0px 0" > Birthday Details</p > </a > </div > 
+     <button type="button" class="collapsible" > Training</button >
+      <div class="content" > <a style="text-decoration:none;"href="http://164.164.240.39/Training/TrainingManagementSystem/ASP/mainuser.asp?sm=a1" > <p class="cont" style="margin: 0px 0" > Training</p > </a > </div >
+      <button type="button" class="collapsible" > Corporate News & Information</button >
+      <div class="content" > 
+     <a href="http://www.soft.net/about_pressroom.htm?sm=g1" > <p class="cont" style="margin: 0px 0" > News/Press & Publications</p > </a > 
+      </div >
+      <button type="button" class="collapsible" > Infra & Logistics</button > 
+     <div class="content" > 
+     <a href="http://164.164.240.39/utilities/vr.idc?sm=h1" > <p class="cont" style="margin: 0px 0" > Vehicle Request</p > </a > 
+     </div >
+      <button type="button" class="collapsible" > Commercial & Purchase</button >
+      <div class="content" >
+      <a href="http://164.164.240.39/inventory/mms/InternalIssue/tab_frameset.html?sm=i1" > <p class="cont" style="margin: 0px 0" > Internal Issue</p > </a > 
+     <a style="text-decoration:none;"href="http://164.164.240.39/inventory/mms/gatepass/tab_frameset.html?sm=j1" > <p class="cont" style="margin: 0px 0" > Gate Pass</p >
+	 </a > <a href="http://164.164.240.39/inventory/Indentforstationary/newindent4.htm?sm=k1" > <p class="cont" style="margin: 0px 0" > Indent for Stationary</p > </a > </div > 
+     <button type="button" class="collapsible" > IQA</button >
+	 <div class="content" > <a style="text-decoration:none;"href="http://164.164.240.39/ISO-QMS/guide/iso9001.html?sm=l1" > <p class="cont" style="margin: 0px 0" > Standards(ISO9001-1994)</p > </a > 
+	 <a href="http://164.164.240.39/ISO-QMS/guide/tips.html?sm=n1" > <p class="cont" style="margin: 0px 0" > Tips for Auditor</p > </a > 
+     <a href="http://164.164.240.39/ISO-QMS/guide/qwork.html?sm=o1" > <p class="cont" style="margin: 0px 0" > Quality @ Work</p > </a >
+      </div >      
+	   <button type="button" class="collapsible" > Events</button >
+      <div class="content" > 
+     <a href="http://164.164.240.39/utilities/Photogallary/page.asp?sm=e1" > <p class="cont" style="margin: 0px 0" > Photo Gallary</p > </a > 
+      </div >
+      <button type="button" class="collapsible" > Tools</button >
+      <div class="content" >
+      <a href="http://164.164.240.39/utilities/company/aspfiles/tab_frameset.html?sm=s2" > <p class="cont" style="margin: 0px 0" > Company Contacts</p > </a > 
+     <a href="http://164.164.240.39/utilities/Circulars/tab_frameset.html?sm=s3" > <p class="cont" style="margin: 0px 0" > Internal Info</p > </a >
+      </div >
+     
+      <button type="button" class="collapsible" > Downloads</button > 
+     <div class="content" >
+      <a href="http://164.164.240.39/utilities/downloads/requirements.doc?sm=t1" > <p class="cont" style="margin: 0px 0" > Software Requirements</p > </a >
+      <a href="http://164.164.240.39/utilities/downloads/HrDept.html?sm=v1" > <p class="cont" style="margin: 0px 0" > Personnel Claims</p > </a >  
+      <a href="http://164.164.240.39/utilities/IMG/User%20Change%20Request.doc?sm=y1" > <p class="cont" style="margin: 0px 0" > User Change Request</p > </a >      
+      <a href="http://blrintranet.soft.net/utilities/IMG/UserEntryForm.doc?sm=z1" > <p class="cont" style="margin: 0px 0" >User Entry Form</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/IMG/UserEntryForm.doc?sm=z1" > <p class="cont" style="margin: 0px 0" >User Exit Form</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/VSG-01-FO-01.doc?sm=z14" > <p class="cont" style="margin: 0px 0" >VSG Service Request Form</p > </a >
+	  <a href="http://164.164.240.39/utilities/Downloads/Intranetaccess.doc?sm=z12" > <p class="cont" style="margin: 0px 0" > Intranet Authorization Form</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/ElectricalRequisation.doc?sm=z23" > <p class="cont" style="margin: 0px 0" >Electrical Requisation Form</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/IndustrialVisitRequest.doc?sm=z22" > <p class="cont" style="margin: 0px 0" >Industrial Visit Request Form</p > </a >	  
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/LibraryBooksIndent.doc?sm=z21" > <p class="cont" style="margin: 0px 0" >Library Books Indent Form</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/Outward.doc?sm=z20" > <p class="cont" style="margin: 0px 0" >Outward Form</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/OutwardReturnable.doc?sm=z19" > <p class="cont" style="margin: 0px 0" >Outward Returnable Form</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/PRFormat2018-1.docx?sm=z18" > <p class="cont" style="margin: 0px 0" >Requisition Format-Purchase[PR]/Works[WR]/Miscellaneous[MR</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/PRFormat2018-1.pdf?sm=z17" > <p class="cont" style="margin: 0px 0" >Requisition Format(PDF)-Purchase[PR]/Works[WR]/Miscellaneous[MR</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/StationaryRequisition.doc?sm=z16" > <p class="cont" style="margin: 0px 0" >Stationary Requisition Form</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/WebsiteIndent.doc?sm=z11" > <p class="cont" style="margin: 0px 0" >Website Hosting Form</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/MedicalDeclaration.doc?sm=md1" > <p class="cont" style="margin: 0px 0" >Medical Declaration</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/FamilyDeclaration.doc?sm=fd1" > <p class="cont" style="margin: 0px 0" > Family Declaration</p > </a >
+      <a href="http://blrintranet.soft.net/utilities/Downloads/GSLIS.doc?sm=gs1" > <p class="cont" style="margin: 0px 0" > GSLIS</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/Downloads/LTC.doc?sm=ltc" > <p class="cont" style="margin: 0px 0" > LTC</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/downloads/officeorder.html?sm=of1" > <p class="cont" style="margin: 0px 0" > Office Orders</p > </a >
+	  <a href="http://blrintranet.soft.net/utilities/downloads/TLAllownce.pdf?sm=of2" > <p class="cont" style="margin: 0px 0" >Travelling Allowance </p > </a > 
+	 </div > 
+     <button type="button" class="collapsible" >SDG-Escalation Matrix</button >
+      <div class="content" >
+      <a href="http://blrintranet.soft.net/utilities/SDG-Escalation%20Matrix/EscalationMatrixforSDG.pdf?sm=E1" ><p class="cont" style="margin: 0px 0" > SDG-Escalation Matrix</p > </a >
+       </div >
+      </td > </tr > 
+          <script >
+              var coll = document.getElementsByClassName("collapsible");
+              var i;
+              for (i = 0; i < coll.length; i++) {
+            coll [i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    }
+    else {
+      content.style.display = "block";
+    }
+  });
+        }
+
+        </script > </table > </div > 
+		<div id="main" > <button class="openbtn" onclick="openNav()" > <span class="glyphicon glyphicon-align-justify" > </span > </button >
+		<img src="https://bsmedia.business-standard.com/_media/bs/img/article/2019-02/13/full/1550069994-6325.jpg" width="90px" height="30px" style="float: center; top: 0px;" >
+		<script >
+		function openNav() {
+            document .getElementById("mySidebar").style.width = "250px";
+            document .getElementById("main").style.marginLeft = "250px";
+            document .getElementById("mySidebar").style.marginLeft ="0";
+        }
+
+        function closeNav() {
+            document .getElementById("mySidebar").style.width = "0";
+            document .getElementById("main").style.marginLeft= "0";
+        }
+
+        </script > 
+     <a style="float: right; margin-right: 12px; margin-top: 8px; color:white;" href="http://blrintranet.soft.net/logout.asp" > <span class="glyphicon glyphicon-off" > </span > </a > 
+     <a style="float: right; margin-right: 20px; margin-top: 8px; color:white;" href="http://blrintranet.soft.net/exim/images/hom.gif" > <span class="glyphicon glyphicon-home" > </span > </a > 
+     <div class="search-container" > <form action="/action_page.php" > <input type="text" placeholder="Search.." name="search" >
+          <button type="submit" > <i class="fa fa-search" > </i > </button > </form > </div > </div >
+      </div >
+      <div class="ulh2" valign="top">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+	  <button class="btn"><a class="navb" href="http://164.164.240.39/EXIM/misc/enter.idc" > EXIM  </a ></button>
+      <button class="btn"><a class="navb"href="http://164.164.240.39/SEZ/misc/pop.html" > SEZ </a ></button> 
+      <button class="btn"><a class="navb" href="http://blrintranet.soft.net/SoftNet/code/menu/homepage_menu.asp" > SOFTNET </a ></button> 
+      <button class="btn"><a class="navb" href="http://164.164.240.39/pmc/default.aspx" > PMC </a ></button> 
+      <button class="btn"><a class="navb" href="http://164.164.240.39/Incubation/home.aspx" > INCUBATION </a ></button> 
+      <button class="btn"><a class="navb" href="http://164.164.240.39/Exim/skillset/asp_net/skillframe.asp" > SKILLSET </a ></button>
+      <button class="btn"><a class="navb" href="http://164.164.240.39/salary/misc/default.htm" > HRIS </a ></button>
+      <button class="btn"><a class="navb" href="http://164.164.240.39/Dispatch/Employees/MyDoc1.asp" > Filling & Dispatching </a ></button>
+      <button class="btn"><a class="navb" href="http://blrintranet.soft.net/inventory/misc/main.html" > Inventory </a > </button>
+      <button class="btn"><a class="navb" href="http://blrintranet.soft.net/iso-qms/misc/qmsiso.html" > IPMG </a ></button> 
+      <button class="btn"><a class="navb" href="http://blrintranet.soft.net/utilities/imsmenu/ims.html" > IMS </a ></button> 
+      <button class="btn"><a class="navb" href="http://blrintranet.soft.net/utilities/img-frms/img-frms.asp" > IMG </a ></button>
+      <button class="btn"><a class="navb" href="http://164.164.240.39/billing/misc/billing.asp" > SoftNet Billing </a ></button> 
+      <button class="btn"><a class="navb" href="http://164.164.240.39/SDG/ASP/Insert/Start.asp" > SDG </a ></button> 
+      <button class="btn"><a class="navb" href="http://164.164.240.39/reachwell/index.asp" > AMC </a ></button> 
+      <button class="btn"><a class="navb" href="http://164.164.240.39/utilities/cmdbmenu/cmdb.html" > CMDB</a ></button>
+      <button class="btn"><a class="navb" href="http://164.164.240.39/HomePage/Help/stpi_help.html" > HELP </a ></button>
+      </div >
+  <div class="container">
+  <img class="nature" src="https://i0.wp.com/www.indianweb2.com/wp-content/uploads/2014/11/stpi.jpg?resize=700%2C320" alt="Notebook"  style="width:100%; height:250px">
+  <img class="nature" src="https://images.yourstory.com/cs/wordpress/2018/11/TZPS2333.jpg?fm=png&auto=format" style="width:100%; height:250px">                     
+  <img class="nature" src="https://i0.wp.com/www.indianweb2.com/wp-content/uploads/2014/11/stpi.jpg?resize=700%2C320"  style="width:100%; height:250px">                   
+  <img class="nature" src="https://i.ytimg.com/vi/YcfY3z6pSQo/maxresdefault.jpg" style="width:100%; height:250px"  >            
+  <img class="nature" src="https://images8.alphacoders.com/593/593193.jpg"  style="width:100%; height:250px" >
+  <div class="content12">
+    <h1>Software Technology Parks of India,Bangalore</h1>
+    <p>Ministry of Electronics & Information Technology (MeitY), Government of India</p>
+  </div>
+</div>
+<script>
+w3.slideshow(".nature", 1600);
+</script>
+     &nbsp;&nbsp;<a href="https://pbs.twimg.com/media/EPIm7bTUUAEHT3S?format=jpg&name=large"><img src="https://pbs.twimg.com/media/EPIm7bTUUAEHT3S?format=jpg&name=large" width="120" height="80" alt="Natural" / ></a>
+     <a href="http://varasidhielectrotech.com/wp-content/uploads/2019/03/STPI3.jpg"> <img src="http://varasidhielectrotech.com/wp-content/uploads/2019/03/STPI3.jpg" width="120" height="80" alt="Natural" / ></a>
+     <a href="https://tse4.mm.bing.net/th?id=OIP.rCb5ThfuTbVqxjpcDhdBYwAAAA&pid=Api&P=0&w=234&h=179"><img src="https://tse4.mm.bing.net/th?id=OIP.rCb5ThfuTbVqxjpcDhdBYwAAAA&pid=Api&P=0&w=234&h=179" width="120" height="80" alt="Natural" / ></a>
+     <a href="http://www.indiatechonline.com/images/it-happened/stpi-awards-to-best-indian-it-exporters-878.jpg"><img src="http://www.indiatechonline.com/images/it-happened/stpi-awards-to-best-indian-it-exporters-878.jpg" width="120" height="80" alt="Natural" / > </a>
+     <a href="https://tse3.mm.bing.net/th?id=OIP.IuxncB7wKKdksnmEhLmy1gHaFj&pid=Api&P=0&w=229&h=172"><img src="https://tse3.mm.bing.net/th?id=OIP.IuxncB7wKKdksnmEhLmy1gHaFj&pid=Api&P=0&w=229&h=172" width="120" height="80" alt="Natural" / > </a>
+     <a href="https://tse3.mm.bing.net/th?id=OIP.hJTh0NQO1436QYFk44Wj_wAAAA&pid=Api&P=0&w=302&h=184"><img src="https://tse3.mm.bing.net/th?id=OIP.hJTh0NQO1436QYFk44Wj_wAAAA&pid=Api&P=0&w=302&h=184" width="120" height="80" alt="Natural" / > </a>
+     <a href="https://tse4.mm.bing.net/th?id=OIP.7PqULUKRrcYb_9eMNHdKqAHaEK&pid=Api&P=0&w=361&h=204"><img src="https://tse4.mm.bing.net/th?id=OIP.7PqULUKRrcYb_9eMNHdKqAHaEK&pid=Api&P=0&w=361&h=204" width="120" height="80" alt="Natural" / > </a>
+	  <a href="http://www.iotopenlab.stpi.in/wp-content/uploads/2020/01/Pic-3.jpg"><img src="http://www.iotopenlab.stpi.in/wp-content/uploads/2020/01/Pic-3.jpg" width="120" height="80" alt="Natural" / > </a>
+    
+      <img src="https://tse1.mm.bing.net/th?id=OIP.HXmA9QcwH_ZMLtklU90e1gAAAA&pid=Api&P=0&w=300&h=300" alt="Avatar" style="width:120px; height: 120px; border-radius: 50%; position: absolute; top: 25%; right: 5%;" > </div >
+        
+      <h5 style="float: right; margin-top: 68px; margin-right: 50px; color:white; font-weight: bold;" > Deepanshi Bhatnagar</h5 > 
+     
+	 <div style="margin-top: 15px; margin-left: 20px; margin-right: 20px; background-color: #d9d9d9; " >
+          <div class="row" >
+		  <div class="column" style=" width: 20%; font-size: 14px; font-weight: bold; text-align: justify; background: #b3d9ff;" >
+		  <br/>
+		  <div style=" list-style-type: none; padding: 0; border:3px solid #004d4d; margin: auto; background-color: #003300; border-radius: 10px;text-color: black;">
+		  <li style="background-color:  #0066cc; text-color:black; font-colr:white;"></li> <br/>
+          <li><a href="http://blrintranet.soft.net/ISO-QMS/Misc/it_policy.pdf" style="color:white;"> Policy on Use of IT Resources of Govt. of India</a ></li> <br/>
+          <li><a href="http://blrintranet.soft.net/ISO-QMS/Misc/email.pdf" style="color:white;"> Email Policy of Govt. of India</a ></li> <br/>
+          <li ><a href="http://blrintranet.soft.net/ISO-QMS/Misc/PUDD.pdf" style="color:white;"> DO’s & DON’T for professional users</a ></li><br/>
+          <li ><a href="http://blrintranet.soft.net/ISO-QMS/Misc/InformationSecurityIncidentReporting.pdf" style="color:white;"> Information Security Incident Management- Reporting Team</a > </li><br/>
+		  </div>
+   </div>
+         <div class="column" style="width: 60%; text-align: justify; background:  #e6f2ff;"><br/><br/>
+		      <p style="font-weight:bold; font-size:20px; color:#000033;"> STPI-B Directorate’s Policy</p> 
+              <p style="font-size: 14px; text-indent: 50px;"> The Policy of STPI-B Directorate is to continuously enhance the value to its customers in line to the organization’s Policy by delivering quality performance in its services driven through innovative and Service Management best practices in terms of Confidentiality, Integrity and Availability.</p >
+               <br/><p style="font-weight:bold; font-size:20px; color:#000033;"> STPI-B Directorate’s Objectives</p>
+              <ul style="font-size: 14px;" >
+              <li>To provide statutory and other promotional services to the exporters by implementing Software Technology Parks (STP)/ Electronics and Hardware Technology Parks (EHTP) Schemes and other such schemes which may be formulated and entrusted by the Government from time to time.</li>
+              <li>To promote micro, small and medium entrepreneurs by creating conducive environment for entrepreneurship in the field of IT/ITES.</li> 
+             <li>To provide data communication services including value added services to IT / IT enabled Services (ITES) related industries. </li>
+             <li>To promote the development and export of software and software services including Information Technology (IT) enabled services/ Bio-IT </li>
+             <li>To fulfill the customer requirements by providing comprehensive quality in its services To ensure the continuous availability of its IT Services </li>
+             <li>To continually improve the performance of its Services</li></ul>
+			 </div > 
+         <div class="column" style=" width: 20%; background: #b3d9ff;" > 
+            
+ 
+
+    <!-- main codes start -->
+    <div class="signboard outer" >
+        <div class="signboard front inner anim04c">
+            <li class="year anim04c" style="list-style: none;">
+                <span></span>
+            </li>
+            <ul style="list-style: none; vertical-align: baseline;  margin: 0; padding: 0;" class="calendarMain anim04c">
+                <li class="month anim04c">
+                    <span></span>
+                </li>
+                <li class="date anim04c">
+                    <span></span>
+                </li>
+                <li class="day anim04c">
+                    <span></span>
+                </li>
+            </ul>
+            <li class="clock minute anim04c" style="list-style: none;">
+                <span></span>
+            </li>
+            <li class="calendarNormal date2 anim04c" style="list-style: none;">
+                <span></span>
+            </li>
+        </div>
+        <div class="signboard left inner anim04c" style="list-style: none;">
+            <li class="clock hour anim04c">
+                <span></span>
+            </li>
+            <li class="calendarNormal day2 anim04c">
+                <span></span>
+            </li>
+        </div>
+        <div class="signboard right inner anim04c" style="list-style: none;">
+            <li class="clock second anim04c">
+                <span></span>
+            </li>
+            <li class="calendarNormal month2 anim04c">
+                <span></span>
+            </li>
+        </div>
+    </div><br/><br/><br/><br/>
+    <!-- main codes end -->
+	<script>
+	$(document).ready(function () {
+
+var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+var dayNames= [ "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday" ];
+
+var newDate = new Date();
+newDate.setDate(newDate.getDate());
+	
+setInterval( function() {
+	var hours = new Date().getHours();
+	$(".hour").html(( hours < 10 ? "0" : "" ) + hours);
+    var seconds = new Date().getSeconds();
+	$(".second").html(( seconds < 10 ? "0" : "" ) + seconds);
+    var minutes = new Date().getMinutes();
+	$(".minute").html(( minutes < 10 ? "0" : "" ) + minutes);
+    
+    $(".month span,.month2 span").text(monthNames[newDate.getMonth()]);
+    $(".date span,.date2 span").text(newDate.getDate());
+    $(".day span,.day2 span").text(dayNames[newDate.getDay()]);
+    $(".year span").html(newDate.getFullYear());
+}, 1000);	
+$(".outer").on({
+    mousedown:function(){
+        $(".dribbble").css("opacity","1");
+    },
+    mouseup:function(){
+        $(".dribbble").css("opacity","0");
+    }
+});
+});
+</script>
+ 
+ <div style=" width:200px; height: 200px; list-style-type: none; padding: 0; border:3px solid #004d4d; margin: auto; background: black; border-radius: 10px;text-color: black;">   
+	 <div style=" width:195px; height: 30px; list-style-type: none; padding: 0; border:0px; margin: 0px; background-color:  #660022;  border-top-right-radius: 7px; border-top-left-radius: 7px;text-color: white;">
+     <p align="center" style="font-weight: bold; font-size: 18px; color:white;">Wishes</p>
+	 </div>
+	 <font class="glow" valign="below" align="center"><marquee direction = "up"  behavior="scroll" style="height:150px" scrollamount="3" align="center" >Happy Birthday </marquee></font>
+  </div>
+        </div >
+	     </td > </tr >
+		 <tr><td>
+<div class="footer" valign="top" style="margin-top: 0px;">
+  <p style="float:down;" >	This site best viewed in 1024 x 768 Resolution.We welcome your valuable <a href="sdg@blr.stpi.in">comments/suggestions</a> © Software Technology Parks of India. All rights reserved</p>
+</div></td></tr>     		 
+		     </table > </body > </html >

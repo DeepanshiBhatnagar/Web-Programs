@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Quest</title>
+
+</head>
+<body>
+<h2>Welcome to Quiz</h2>
+<h3>Please Enter Your Answer in Prompt</h3>
+
+<script>
+
+let arr = [
+  ["Q1", "What solar system do we live in?", "Earth"],
+  ["Q2", "How many ounces are in cup?", "8"],
+  [
+    "Q3",
+    "What type of cellphone is currently the most popular in the world?",
+    "Apple",
+  ],
+  ["Q4", "What is the tallest building in Chicago?", "willis tower"],
+  [
+    "Q5",
+    "What is the name of chicago white sox new stadium?",
+    "Guaranteed Rate Field",
+  ],
+];
+
+/*let arr = [
+  "What solar system do we live in?", "How many ounces are in cup?",
+  "What type of cellphone is currently the most popular in the world?",
+  "What is the tallest building in Chicago?",
+  "What is the name of chicago white sox new stadium?",
+];*/
+let len=arr.length-1;
+for (let i = 0; i <= len; i++) {
+ 
+  let ansr=prompt( arr[i][0]+":"+arr[i][1],"");
+  document.write("</br>"+arr[i][0]+ ":" +arr[i][1]+"</br>Correct Answer: "+arr[i][2]+"</br>"+ansr);
+ //document.write("</br>"+ "Q" +i+  arr[i]+"</br>"+"Ansr:- ",ansr);
+}
+
+</script>
+</body>
+</html>
+ 
