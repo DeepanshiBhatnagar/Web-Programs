@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+.drop{
+  display: inline-block;
+  position: relative;
+}
+.drop_btn {                         /* This is for styling the dropdown button */
+    background-color: #8842d5;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+	}
+.drop-content{
+  position: absolute;
+  color: white;
+  background-color: #8842d5;
+  display:none;
+}
+
+.drop:hover  .drop-content{
+  display: block;
+}
+
+
+</style>
+</head>
+
+<body>
+<h3>Create a basic dropdown menu</h3>
+
+<div class="drop">
+<p>Hover on me</p>
+<div class="drop-content">
+  <p>Dropdown Content</p>
+</div>
+</div>
+
+</body>
+
+</html>

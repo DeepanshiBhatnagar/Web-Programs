@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+<style>
+
+/*------------------------------------------*/
+a[href] {    
+    background-color: lightblue;
+}
+
+/*-------------------------------------------*/
+[title~="doggo"]{
+    border: 10px solid blue;
+}
+
+/*-------------------------------------------*/
+[class |="style" ]{
+    background: lightblue;
+}
+p.style-1 {
+    padding: 10px;
+}
+
+p.notstyle {
+  font: 200%;
+}
+
+p.style2 {
+    border: solid red 2px;
+}
+
+/*--------------------------------------------*/
+[class^="css"] { 
+ background: pink;
+}
+
+p.css-1 {
+ padding: 10px;
+}
+
+p.notcss {
+ font: 200%;
+}
+
+p.css2 {
+ border: solid red 2px;
+}
+
+/*--------------------------------------------*/
+[class$="end"]{
+  background: lightgreen;
+}
+p.end-1 {
+ padding: 10px;
+}
+
+p.notend {
+ font: 200%;
+}
+
+p.4ever-end {
+ border: solid red 2px;
+}
+
+/*--------------------------------------------*/
+[class*="stl"] { 
+ background: blue;
+ color: white;
+}
+
+p.stl-1 {
+ padding: 10px;
+}
+
+p.nothing {
+  text-align: center;
+}
+
+p.notstl {
+ font: 200%;
+}
+
+p.4ever-stl {
+ border: solid red 2px;
+}
+
+/*--------------------------------------------*/
+input[type="text"] {
+ width: 120px;
+ display: block;
+ margin-bottom: 20px;
+ background-color: lightblue; 
+} 
+
+input[type="button"] {
+ width: 100px;
+ margin-left: 25px;
+ display: block; 
+}
+</style>
+</head>
+
+<body>
+<h2>1. Select elements with specified attribute & value</h2>
+    <a href="https://www.bitdegree.org/" target="_blank">Link 1</a>
+    <a href="#" target="_blank">Link 2</a>
+	
+	<br/>
+<h2>2. Select elements with specified value regardless of its placement</h2>	
+	<p title="blablabla">Text</p>
+	<p title="doggo">Text</p>
+	<p title="bla doggo bla">Text</p>
+
+    <br/>	
+<h2>3. Select elements that start with a specified value</h2>	
+	<p class="style-1">Text</p>
+	<p class="notstyle">Text</p>
+	<p class="style2">Text</p>
+	
+	<br/>
+<h2>4. Select elements that start with a specified value describing just part of it</h2>		
+	<p class="css-1">Text</p>
+    <p class="notcss">Text</p>
+    <p class="css2">Text</p>
+ 
+ <br/> 
+ <h2>5. Select elements that end with a specified value</h2>	 
+    <p class="end-1">Text</p>
+	<p class="notend">Text</p>
+	<p class="4ever-end">Text</p>
+
+ <br/> 
+ <h2>6. Select elements with a specified value anywhere in the attribute</h2>	 	
+	<p class="stl-1">Text</p>
+	<p class="notstl">Text</p>
+	<p class="nothing">Text</p>
+	<p class="4ever-stl">Text</p>
+	
+ <h2>7. Select elements that end with a specified value</h2>	
+	<input type="text" placeholder="Enter keywords">
+    <input type="button" value="Search">
+</body>
+</html>

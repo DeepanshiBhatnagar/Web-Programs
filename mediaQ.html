@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+	*{
+	box-sizing: border-box;
+	}
+	body {
+  background-color: lightgreen;
+  margin: 0;
+    }
+	
+	.row{
+	 overflow: hidden;
+     background-color: purple;
+	}
+	.row a{
+	float: left;
+	padding: 14px 18px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	background-color: purple;
+	}
+	.row a:hover{
+	  background-color: pink;
+	  color: blue;
+	}
+	
+    .dropdown{
+	  float: left;
+	  overflow: hidden;
+	}
+	.dropdown .dropbtn{
+	  background-color: inherit;
+	  font-family: inherit;
+	  padding: 14px 18px;
+	  border: none;
+	  outline: none;
+	  margin: 0;
+	  color: white;
+	  cursor: pointer;
+	}
+	.drop-cont{
+	  display: none;
+	  position: absolute;
+	  min-width: 160px;
+	}
+	.drop-cont a{
+	  display: block;
+	  float: none;
+	  text-align: left;
+	}
+	.dropdown:hover .drop-cont{
+	    display: block;
+	}
+	@media (max-width: 992px){
+	body{
+	    background-color: pink;
+	}	
+	.row a, .row .dropdown .dropbtn{
+	   display: block;  
+	   float: none;
+	   text-align:center;
+	}
+	}
+	</style>
+</head>
+
+<body>
+<div class="row">
+<a>Link</a>
+<a>Link</a>
+<a>Link</a>
+<a>Link</a>  
+  <div class="dropdown">
+    <button class="dropbtn">Link</button>
+         <div class="drop-cont">
+             <a>Link1</a>
+             <a>Link2</a>
+             <a>Link3</a>
+             <a>Link4</a>  
+         </div>
+  </div>
+</div>
+	<p>Try to resize your browser window to see background color change.<p>
+</body>
+
+</html>

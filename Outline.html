@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+p {
+    padding-left: 5px;
+    border: 2px solid gray;
+    outline-color: blue;
+}
+
+p.solid {outline-style: solid;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.double {outline-style: double;}
+p.dashed {outline-style: dashed;}
+p.dotted {outline-style: dotted;}
+
+p.clr {
+    border: 2px solid gray;
+    padding-left: 5px;
+	width:600px;
+	margin :auto;
+    outline-style: dashed;
+    outline-color: red;
+	outline-width: 6px; /* or medium */
+	outline-offset: 0.4cm;  /* diff. bw border & Outline */
+}
+
+p.one {
+    border: 2px solid gray;
+    outline: 6px dotted blue;
+}
+</style>
+</head>
+<body>
+<!---------------------- Set different outline-style values------------------->
+<h3>Set different outline-style values </h3>
+	<p class="solid">I have a solid outline</p>
+	<p class="inset">I have an inset outline</p>
+	<p class="outset">I have an outset outline</p>
+	<p class="groove">I have a groove style outline</p>
+	<p class="ridge">I have a ridge style outline</p>
+	<p class="double">I have a double outline</p>
+	<p class="dashed">I have a dashed outline</p>
+	<p class="dotted">I have a dotted outline</p>
+<br/>
+<!---------------------- Specify outline color,width & diff. b/w border and outline ------------------->
+<h3>Specify outline color using a color keyword value </h3>	
+	<p class="clr">I am a paragraph</p>
+<br/>	
+<!----------------------Use outline shorthand for outline-width, outline-style, and outline-color------------------->
+<h3>Use outline shorthand for outline-width, outline-style, and outline-color </h3>	
+<p class="one">I am a paragraph</p>
+
+</body>
+</html>

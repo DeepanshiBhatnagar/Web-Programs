@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>JS Example</title>
+</head>
+<body>
+
+<script>
+//1.Write a program to reverse the string (without using the predefined method) 
+let str="ABCDEFGHI";
+let newStr="";
+let len=str.length-1;
+for(let i=len;i>=0; i--){
+  newStr=newStr+str[i];
+ 
+}
+   console.log(newStr);
+</script>
+
+<script>
+// Write a program that can perform arithmetic operations using switch conditions (calculator)?
+let a=10,b=4;
+let op='/';
+switch(op){
+  case '+':
+    console.log(a+b);
+    break;
+    case '-':
+    console.log(a-b);
+    break;
+    case '*':
+    console.log(a*b);
+    break;
+    case '/':
+    console.log(a/b);
+    break;
+    case '%':
+    console.log(a%b);
+    break;
+  default:
+    console.log("invalid");
+}
+</script>
+
+<script>
+// Write a program to get a factorial of a number (Using recursive function).
+
+let n;
+function fact(n){
+  if(n==0){
+    return 1;
+  }
+    else{
+      return n*fact(n-1);
+    }
+  }
+console.log(fact(7));
+</script>
+
+<script>
+//Write a program to find a unique character in a string.(non repeated characters)
+let str1="hello world";
+let len1=str1-length-1;
+const names = ['John', 'Paul', 'George', 'Ringo', 'John'];
+for(i=0;i<=len1;i++){
+  for(let j=0;j<=len1;j++){
+    if(str1[i]==str)
+  }
+}
+let unique = [...new Set(str1)];
+console.log(unique);
+
+
+</script>
+<script></script>
+<script></script>
+<script></script>
+</body>
+
+</html>

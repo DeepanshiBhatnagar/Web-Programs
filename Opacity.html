@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+#img1{
+  width:200px;
+  heigth: 200px;
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* This is for IE8 and other earlier browsers */ 
+}
+#img2{
+  width:200px;
+  heigth: 200px;
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* This is for IE8 and other earlier browsers */ 
+}
+#img2:hover{
+  opacity: 1.0;
+   filter: alpha(opacity=100); /* This is for IE8 and other earlier browsers */
+}
+
+  div
+  {
+  background-color:  #8842d5;
+  padding: 10px;
+  }
+  div.first{
+   opacity: 0.1;
+  }
+  div.second{
+  opacity: 0.4;
+  }
+  div.third{
+  opacity: 0.8;
+  }
+  
+  .opc{
+  background: rgb(136, 66, 213);
+  padding: 10px;
+  }
+  .opc, .frst{
+  background: rgb(136, 66, 213, 0.1);
+  }
+   .opc, .scnd{
+  background: rgb(136, 66, 213, 0.4);
+  }
+   .opc, .thrd{
+  background: rgb(136, 66, 213, 0.8);
+  }
+  
+  .div1{
+  margin: 30px;
+  height: 200px;
+  background: url( https://cdn.bitdegree.org/learn/soap-colorful-color-fruit-68525.jpeg );
+  border: 2px solid black;
+  }
+  .div2{
+  margin: 5%;
+  border: 1px solid red;
+  background-color: #ffffff;
+  padding: 10px;
+  opacity: 0.8;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+<h3>1. Specify opacity to make an image transparent</h3>
+<img id="img1" src="https://cdn.bitdegree.org/learn/soap-colorful-color-fruit-68525.jpeg" alt="Image can't be displayed">
+
+<h3>2. Apply opacity settings upon hover</h3>
+<img id="img2" src="https://cdn.bitdegree.org/learn/soap-colorful-color-fruit-68525.jpeg" alt="Image can't be displayed">
+
+<h3>3. Create transparent box</h3>
+<div class="first"><p>opacity 0.1</p></div>
+<div class="second"><p>opacity 0.4</p> </div>
+<div class="third"><p>opacity 0.8</p> </div>
+<div><p>opacity 1 (default)</p></div>
+
+<h3>4. Specify transparency with RGBA</h3>
+<h1>Transparent Box</h1>
+<p>With opacity:</p>
+<div style="opacity:0.2;"><p>20% opacity</p></div>
+<div style="opacity:0.4;"><p>40% opacity</p></div>
+<div style="opacity:0.8;"><p>80% opacity</p></div>
+<div><p>100% opacity</p></div>
+
+<p> With RGBA color values:</p>
+<div class="frst"><p>20% opacity</p></div>
+<div class="scnd"><p>40% opacity</p></div>
+<div class="thrd"><p>80% opacity</p></div>
+<div><p>100% opacity</p></div>
+
+<h3>5. Manipulate text in a transparency box</h3>
+<div class="div1">
+  <div class="div2">
+     <p>This transparent box contains some text</p>
+  </div>
+</div>
+</body>
+
+</html>

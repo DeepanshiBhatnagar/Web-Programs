@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+body{
+ counter-reset: chapter;
+}
+
+h1::before{
+  counter-increment : chapter;
+  content: "Chapter "  counter(chapter) " : ";
+}
+
+</style>
+</head>
+
+<body>
+<h3> Create a simple list with CSS counters</h3>
+	<h1>HTML</h1>
+	<h1>CSS</h1>
+	<h1>JavaScript</h1>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css"/>
+	
+<style>
+ol {
+    counter-reset: list;
+    list-style-type: none;
+}    
+
+li::before {
+    counter-increment: list;
+    content: counters(list, ".") " ";
+}
+
+</style>
+</head>
+
+<body>
+<h2> Create an outlined list with CSS counters</h2>
+	<ol>
+		<li>Cat</li>
+		<li>Dog
+			<ol>
+				<li>Shiba</li>
+				<li>Retriever</li>
+				<li>Bulldog
+					<ol>
+						<li>French</li>
+						<li>British</li>
+					</ol>
+				</li>
+				<li>Shepherd</li>
+			</ol>
+		</li>
+		<li>Rabbit</li>
+		<li>Turtle</li>
+	</ol>
+
+	<ol>
+		<li>Cookie</li>
+		<li>Cake</li>
+	</ol>
+</body>
+
+</html>

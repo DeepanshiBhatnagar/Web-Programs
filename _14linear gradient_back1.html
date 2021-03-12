@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+ #grad {
+ height: 250px;
+ background: linear-gradient(#ff5e7e, #c272d5); /* In case a browser does not support gradients */
+ background: linear-gradient(#ff5e7e, #c272d5); /* Standard syntax */
+ background: -webkit-linear-gradient(#ff5e7e, #c272d5); /* Safari */
+}
+
+#grad1 {
+ height: 250px;
+ width: 500px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: linear-gradient(to right, #ff5e7c, #c272d4); /* Standard syntax */
+ background: -webkit-linear-gradient(left, #ff5e7c, #c272d4); /* Safari */
+}
+
+#grad2 {
+ width: 600px;
+ height: 400px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: linear-gradient(to bottom right, #ff5e7c, #c272d4); /* Standard syntax */
+ background: -webkit-linear-gradient(left top, #ff5e7c, #c272d4); /* Safari */
+}
+
+#grad3 {
+ height: 400px;
+ width: 600px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: linear-gradient(180deg, #ff5e7c, #c272d4); /* Standard syntax */
+ background: -webkit-linear-gradient(180deg, #ff5e7c, #c272d4); /* Safari */
+}
+
+#grad4 {
+ height: 400px;
+ width: 600px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: linear-gradient(#ff5e7c, #c272d4, #718ced); /* Standard syntax */
+ background: -webkit-linear-gradient(#ff5e7c, #c272d4, #718ced); /* Safari */
+}
+
+#grad5 {
+ width: 600px;
+ height: 400px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: linear-gradient(to left, #ff5e7c, #c272d4, #718ced, #02aab0, #00cdac); /* Standard syntax */
+ background: -webkit-linear-gradient(to left, #ff5e7c, #c272d4, #718ced, #02aab0, #00cdac); /* Safari */
+}
+
+#grad6 {
+ width: 600px;
+ height: 600px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: linear-gradient(to right, rgb(255, 94, 124, 0.5), rgb(194, 114, 212, 1)); /* Standard syntax */
+ background: -webkit-linear-gradient(left, rgb(255, 94, 124, 0.5), rgb(194, 114, 212, 1)); /* Safari */
+}
+
+#grad7 {
+ width: 600px;
+ height: 600px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: repeating-linear-gradient(#718ced, #753a88 15%, #ff5e7c 25%); /* Standard syntax */
+ background: -webkit-repeating-linear-gradient(#718ced, #753a88 15%, #ff5e7c 25%); /* Safari*/
+}
+
+#grad8 {
+ height: 300px;
+ width: 600px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: radial-gradient(#ff5e7c, #c272d4, #6bbae8); /* Standard syntax */
+ background: -webkit-radial-gradient(#ff5e7c, #c272d4, #6bbae8); /* Safari */
+}
+
+
+#grad9{
+width:600px;
+height:400px;
+background: blue; /* In case a browser doesn't support gradients */
+ background: radial-gradient(#ff5e7c 10%, #c272d4 50%, #6cbae8 80%); /* Standard syntax */
+ background: -webkit-radial-gradient(#ff5e7c 10%, #c272d4 50%, #6bbae8 80%); /* Safari */
+}
+
+
+#grad10 {
+ height: 300px; 
+ width: 600px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: radial-gradient(circle, #ff5e7c, #c272d4, #6bbae8); /* Standard syntax */
+ background: -webkit-radial-gradient(circle, #ff5e7c, #c272d4, #6bbae8); /* Safari */
+}
+
+
+#grad11 {
+ margin: 3px;
+ width: 600px;
+ height: 400px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: radial-gradient(closest-side at 65% 50%, #ff5e7c, #c272d4, #6bbae8); /* Standard syntax */
+ background: -webkit-radial-gradient(closest-side at 65% 50%, #ff5e7c, #c272d4, #6bbae8); /* Safari */
+}
+
+
+#grad12 {
+ margin: 3px;
+ width: 600px;
+ height: 400px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: radial-gradient(farthest-side at 65% 50%, #ff5e7c, #c272d4, #6bbae8); /* Standard syntax */
+ background: -webkit-radial-gradient(farthest-side at 65% 50%, #ff5e7c, #c272d4, #6bbae8); /* Safari */
+}
+
+#grad13 {
+ height: 400px; 
+ width: 600px;
+ background: blue; /* In case a browser doesn't support gradients */
+ background: repeating-radial-gradient(#5b07ff, #ff008d 15%, #5d78f9 25%); /* Standard syntax */
+ background: -webkit-repeating-radial-gradient(#5b07ff, #ff008d 15%, #5d78f9 25%); /* Safari */
+}
+	</style>
+
+</head>
+
+<body>
+<h3>Apply the linear gradient for your background without specifying direction</h3>
+		<div id="grad"></div><br/>
+		
+<h3>Apply the linear gradient for your background from left to right</h3>		
+		<div id="grad1"></div>
+
+<h3>Diagonal linear gradient from top left to bottom right</h3>		
+		<div id="grad2"></div>
+		
+<h3>Linear gradient with a defined angle</h3>	
+	   <div id="grad3"></div>	
+
+<h3>Create the linear gradient background with multiple colors (default direction)</h3>	
+       <div id="grad4"></div>	
+
+<h3>Create the linear gradient background with multiple colors from left to right</h3>	   
+	   <div id="grad5"></div>	   
+
+<h3>Linear gradient (left-right) with changing transparency</h3>	   
+	   <div id="grad6"></div>	
+	
+<h3>Create repeating Linear Gradient</h3>	   
+	<div id="grad7"></div>	
+	
+<h3>Apply the radial gradient with evenly spaced color stops</h3>	   
+	<div id="grad8"></div>	
+	
+<h3>Apply the radial gradient with differently spaced color stops</h3>	   
+	<div id="grad9"></div>	
+	
+<h3>Set a circle shaped radial gradient</h3>	   
+	<div id="grad10"></div>	
+	
+<h3>Manipulate radial gradient size parameters</h3>	   
+	<div id="grad11"></div>	
+	<div id="grad12"></div>	
+	
+<h3></h3>	   
+	<div id="grad13"></div>	
+
+	</body>
+
+</html>

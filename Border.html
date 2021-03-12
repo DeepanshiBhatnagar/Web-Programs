@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+<style>	
+p {
+  padding-left: 10px;
+}
+
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.inset {border-style: inset;}
+p.ridge {border-style: ridge;}
+p.dashed {border-style: dashed;}
+p.dotted {border-style: dotted;}
+p.outset {border-style: outset;}
+p.hidden {border-style: hidden;}
+p.none {border-style: none;}
+p.mixed {border-style: groove dotted solid dashed;}
+
+
+p.thin {
+   border-width: thin;
+   border-style: solid;
+}
+p.inpix {
+   border-width: 3px;
+   border-style: solid;
+}
+p.mix {
+   border-width: 2px 5px 4px 5px;
+   border-style: solid;
+}
+
+
+p.hex {
+   border-style: solid;
+   border-color: #e9385a;
+}
+p.mix1 {
+   border-color: red green blue orange;
+   border-style: solid;
+}
+
+p.radius {
+   border: 2px solid #e9385a;
+   border-radius: 5px;
+}
+
+p.ind {
+   padding-left: 10px;
+   border-right-style: solid;
+   border-left-style: solid;
+   border-bottom-style: dotted;
+   border-top-style: dotted; 
+}
+
+p.srt {
+   border: 3px dotted blue;
+}
+
+p.single_line {
+   border-left: 3px solid green;
+   background-color: #eeeeee;
+   padding-left: 10px;
+}
+
+#borderimage { 
+ border: 15px solid transparent; 
+ padding: 5px;
+ -webkit-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 stretch;   /* safari 3.1-5 */&nbsp;
+ -o-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 stretch;        /* opera 11-12.1 */&nbsp;
+ border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 stretch;
+}
+
+#borderimage1 { 
+ border: 30px solid ; 
+ padding: 5px; 
+ -webkit-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 round;     /* safari 3.1-5 */&nbsp;
+ -o-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 round;          /* opera 11-12.1 */&nbsp;&nbsp;
+ border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 round;
+}
+
+#borderimage2 { 
+ border: 5px solid transparent;
+ padding: 10px;
+ -webkit-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 round; /* safari 3.1-5 */
+ -o-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 round; /* opera 11-12.1 */ 
+ border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 round; 
+}
+#borderimage3 { 
+ border: 5px solid transparent;
+ padding: 10px;
+ -webkit-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 stretch; /* safari 3.1-5 */
+ -o-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 stretch; /* opera 11-12.1 */ 
+ border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 20 stretch;
+} 
+#borderimage4 { 
+ border: 5px solid transparent;
+ padding: 10px;
+ -webkit-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 33.33% round; /* safari 3.1-5 */
+ -o-border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 33.33% round; /* opera 11-12.1 */ 
+ border-image: url('https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d') 33.33% round;
+}
+</style>
+
+</head>
+
+<body>
+<!----------------------------Set unique CSS border style to each element------------------->
+<h3>Set unique CSS border style to each element</h3>
+	<p class="solid">I have a solid border.</p>
+	<p class="double">I have a double border.</p>
+	<p class="groove">I have a groove border.</p>
+	<p class="inset">I have an inset border.</p>
+	<p class="ridge">I have a ridge border.</p>
+	<p class="dashed">I have a dashed border.</p>
+	<p class="dotted">I have a dotted border.</p>
+	<p class="outset">I have an outset border.</p>
+	<p class="hidden">I have a hidden border.</p>
+	<p class="none">I don't have a border.</p>
+	<p class="mixed">I have a mixed border.</p>
+<br/>
+	
+<!----------------------------------- Specify CSS border width ------------------------------>
+	<h3>Specify CSS border width</h3>
+	<p class="thin">I have a thin border</p>
+    <p class="inpix">I have a 3px border</p>
+    <p class="mix"> I have a mixed width border</p>
+<br/>	
+	
+<!-------------- Define CSS border color using different color value indicators --------------->
+	<h3>Define CSS border color using different color value indicators</h3>
+	<p class="hex">My border color is #E9385A</p>
+	<p class="mix1"> I have a mixed color border</p>
+<br/>	
+<!--------------------- Use border-radius to create rounded borders --------------------------->
+	<h3>Use border-radius to create rounded borders</h3>
+	<p class="radius">I have a rounded border.</p>
+<br/>	
+	
+<!------------------- Assign individual styles to each wall of a CSS border ------------------>
+	<h3>Assign individual styles to each wall of a CSS border</h3>
+	<p class="ind">I have a rounded border.</p>
+<br/>
+	
+<!----------- Use shorthand to define border-width, border-color, and border-style ----------->
+	<h3>Use shorthand to define border-width, border-color, and border-style</h3>
+	<p class="srt">I have a rounded border.</p>
+<br/>
+	
+<!------------ Apply style to a single CSS border wall using the shorthand property ---------->
+	<h3>Apply style to a single CSS border wall using the shorthand property</h3>
+	<p class="single_line">I have a rounded border.</p>
+<br/>
+	
+<!----------------------- Use an image as a CSS border by stretching it ------------------------->
+	<h3>Use an image as a CSS border by stretching it</h3>
+	<div id="borderimage">I'm a div</div>
+	<p>I'm the original 60 x 60px image:</p><img src="https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d">
+<br/>
+	
+<!------------------------ Use an image as a CSS border by repeating it ------------------------>
+	<h3>Use an image as a CSS border by repeating it</h3>
+	<div id="borderimage1">I'm a div</div>	
+<br/>	
+	
+<!----------- Use different slice values to create different borders from the same image ------->
+	<h3>Use different slice values to create different borders from the same image</h3>
+	<p id="borderimage2">I'm the first paragraph.</p>
+	<p id="borderimage3">I'm the second paragraph.</p>
+	<p id="borderimage4">I'm the twin brother of the first paragraph. We are very much alike on the outside, but a little different
+		on the inside.</p>
+	<p>I'm the original 60 x 60px image:</p><img src="https://cdn.bitdegree.org/learn/border-img-5.png?229dfb2d">
+<br/>
+	
+	<!--  -->
+	<h3></h3>
+	
+	<!--  -->
+	<h3></h3>
+	
+	<!--  -->
+	<h3></h3>
+	
+	<!--  -->
+	<h3></h3>
+	
+	<!--  -->
+	<h3></h3>
+
+</body>
+
+</html>

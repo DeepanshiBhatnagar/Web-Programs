@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+li {
+    display: inline;
+}
+
+span{
+    display: block;
+}
+h2.none{
+    display:none;
+}
+
+h2.hidden{
+   visibility: hidden;
+}
+</style>
+</head>
+<body>
+<!--------------------------Override the default display value to inline------------------------>
+<h3> Override the default display value to inline</h3>
+	<ul>
+		<li><a href="https://www.bitdegree.org/courses" target="_blank">Courses</a></li>
+		<li><a href="https://www.bitdegree.org/learn" target="_blank">Learn</a></li>
+		<li><a href="https://www.bitdegree.org/" target="_blank">Main</a></li>
+	</ul>
+	
+<!--------------------------Override the default display value to block------------------------>
+<h3> Override the default display value to block</h3>
+<span>A display property with a value of "block" breaks</span><span> one line into two lines.</span>
+
+
+<!-------------------------- Hide an element using display: none------------------------>
+<h3>Hide an element using display: none</h3>
+<h3>This is a visible heading</h3>
+<h2 class="none">This is a hidden heading</h2>
+
+<!-------------------------- Hide an element using visibility: hidden------------------------>
+<h3>Hide an element using visibility: hidden</h3>
+<h3>This is a visible heading</h3>
+<h2 class="hidden">This is a hidden heading</h2>
+</body>
+</html>

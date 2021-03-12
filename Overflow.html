@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+div.ovr{
+  width:50px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+   border: 1px solid blue;
+}
+div.learn {
+    white-space: nowrap; 
+    width: 13em; 
+    overflow: hidden; 
+    border: 2px solid #000000;
+}
+div.learn:hover {
+    text-overflow: inherit;
+    overflow: visible;
+}
+
+div.oy{
+    height:60px;
+	width: 100px;
+	overflow-y: hidden;
+}
+div.ox {
+ height: 100px;
+ width: 40px;
+ overflow-x: hidden;
+}
+</style>
+</head>
+<body>
+<!--------------------------Set overflow text to ellipsis------------------------>
+<h3>1. Set overflow text to ellipsis</h3>
+	<div class="ovr">This is a div element.This is a div element.</div>
+
+<p><strong>Note:</strong> The text-overflow: "<em>string</em>" only works in 
+Firefox.</p>
+<br/>
+
+<!--------------------------Show overflown text when hovered on------------------------>
+<h3>2. Show overflown text when hovered on</h3>
+<p>To see whole text, hover over the divs.</p>
+<div class="learn" style="text-overflow: inherit;">This is very wide text, that a I am writing now</div>
+<br>
+<div class="learn" style="text-overflow: initial;">This is very wide text, that a I am writing now</div>
+<br/>
+
+<!--------------------------Set overflow-y to hidden------------------------>
+<h3>3. Set overflow-y to hidden</h3>
+<div class="oy">This <br/>is<br/> Paragraph<br/>!</div>
+<br/>
+<!--------------------------Set overflow-x to hidden------------------------>
+<h3>4. Set overflow-x to hidden</h3>
+	<h4>overflow-x: scroll:</h4>
+	<div class="ox">This is a div element!</div>
+</body>
+</html>

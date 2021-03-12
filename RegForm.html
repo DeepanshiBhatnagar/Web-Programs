@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+<div>
+<form method="post" action="form_submit.php">
+  <h3>Registration Form</h3>
+  <fieldset>
+       <legend>User Information</legend>
+       First Name: <input type="text" name="firstName"/>
+       <br/><br/>
+       Last Name: <input type="text" name="lastName"/>
+       <br/>
+  </fieldset>
+   <br/>
+  <fieldset>
+        <legend>User Details</legend>
+        UserName: <input type="text" name="username"/>
+        <br/><br/>
+         Password: <input type="password" name="pwd" maxlength="10"/>
+        <br/>
+  </fieldset>
+   <br/>
+  <fieldset>
+         <legend>Male/Female Details</legend>
+         <input type="radio" name="gender"/> Male<br/>
+         <input type="radio" name="gender"/> Female<br/>
+  </fieldset>
+  <br/>
+  <fieldset>
+          <legend>Choose Your Country</legend>
+          <select type="select">
+             <option name="">India</option>
+             <option name="">USA</option>
+             <option name="">Chine</option>
+             <option name="">England</option>
+             <option name="">Australia</option>
+          </select>
+  </fieldset>
+   <br/>
+  <fieldset>
+          <legend>Select your qualification</legend>
+          <input type="checkbox" name="btech"/>B.Tech
+          <input type="checkbox" name="bsc"/>BSc
+          <input type="checkbox" name="ba"/>BA
+  </fieldset>
+   <br/>
+  <fieldset>
+          <legend>Select Your Branch</legend>
+		  <select type="select">
+		     <optgroup label="B.Tech">
+			    <option name="cse">CSE</option>
+			    <option name="me">Mechanical</option>
+			    <option name="ee">Electrical</option>
+			 </optgroup>
+			  <optgroup label="BSc">
+			    <option name="maths">Maths</option>
+				<option name="cs">Computer Science</option>
+			  </optgroup>
+		  </select>
+  </fieldset>
+   <label>Your Feedback:</label><br/>
+   <textarea cols="65" rows="5">
+   I really like your web services....
+   </textarea>
+   <br/>
+          <input type="submit" name="submit" value="Submit"/>
+          <input type="reset" name="reset" value="Reset"/>
+
+</form>
+</div>
+</body>
+</html>

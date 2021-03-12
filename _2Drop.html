@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+.drop_btn {                                 /* This is for styling the dropdown button */
+    background-color: #8842d5;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+.drop { 
+    display: inline-block;
+    position: relative;
+}
+   
+.drop-content {                             /* For styling the content itself */
+    background-color: #f2f2f2;
+    min-width: 150px;
+    display: none;
+    position: absolute;
+}
+  
+.drop-content a {                           /* For styling the links inside the content */
+    color: black;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+}
+.drop-content a:hover {                     /* Change the color of the dropdown links when they are hovered on */    
+    background-color: lightgray;
+}
+.drop:hover .drop-content {                 /* Shows the dropdown menu list when hovered on */
+    display: block;
+}
+.drop:hover .drop_btn {                     /* Changes the dropdown button color once it is hovered on as well */
+    background-color: #7300ff;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Create a dropdown menu with links</h3>
+
+<div class="drop">
+<button class="drop_btn">Hover on me</button>
+<div class="drop-content">
+  <a href=" https://jsbin.com/?js,console" target="_blank">Link 1</a>
+  <a href=" https://jsbin.com/?js,console" target="_blank">Link 2</a>
+  <a href=" https://jsbin.com/?js,console" target="_blank">Link 3</a>
+  <a href=" https://jsbin.com/?js,console" target="_blank">Link 4</a>
+  <a href=" https://jsbin.com/?js,console" target="_blank">Link 5</a>
+</div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+
+.tbl1, th, td{
+  border: 1px solid black;
+}
+
+.tbl1{
+  border-collapse: collapse;
+}
+
+.tbl2, th, td{
+  border: 1px solid black;
+}
+
+.tbl2{
+  border-spacing: 10px 15px;
+  border-collapse: separate;
+  empty-cells: hide;
+
+}
+caption{
+  caption-side: bottom;
+}
+
+.auto {
+   table-layout: auto;
+   width: 280px;
+}
+
+.fixed {
+   table-layout: fixed;
+   width: 280px;
+}
+table.tbl3 {
+ border-collapse: collapse;
+ width: 100%;
+}
+
+table.tbl3, th, td {
+ border-bottom: 2px solid black;
+ text-align: left;
+}
+
+</style>
+</head>
+<body>
+<!-------------------Specify border width, color and style for a table --------------------->
+<h3> Specify border width, color and style for a table</h3>
+<table>
+<tr><th>S. No.</th><th>Name</th><th>Course</th></tr>
+<tr><td>1. </td><td>ABC</td><td>Btech</td></tr>
+<tr><td>2. </td><td>XYZ</td><td>BCA</td></tr>
+<tr><td>3. </td><td>PQR</td><td>MBA</td></tr>
+</table>
+<br/>
+
+<!-------------------------------- Collapse table borders----------------------------------->
+<h3>Collapse table borders </h3>
+<table  class="tbl1">
+<tr><th>S. No.</th><th>Name</th><th>Course</th></tr>
+<tr><td>1. </td><td>ABC</td><td>Btech</td></tr>
+<tr><td>2. </td><td>XYZ</td><td>BCA</td></tr>
+<tr><td>3. </td><td>PQR</td><td>MBA</td></tr>
+</table>
+<br/>
+
+<!-------------------Use border spacing on uncollapsed borders & Create a caption text for the table----------------------------->
+<h3> Use border spacing on uncollapsed borders & Create a caption text for the table</h3>
+<table  class="tbl2">
+<tr><th>S. No.</th><th>Name</th><th>Course</th></tr>
+<tr><td>1. </td><td>ABC</td><td>Btech</td></tr>
+<tr><td>2. </td><td>XYZ</td><td>BCA</td></tr>
+<tr><td>3. </td><td>PQR</td><td>MBA</td></tr>
+<caption>This is my caption.</caption>
+</table>
+<br/>
+
+
+<!--------------------------------Add empty cells in a table ------------------------------->
+<h3>Add empty cells in a table </h3>
+<table  class="tbl2">
+<tr><th>S. No.</th><th>Name</th><th>Course</th></tr>
+<tr><td>1. </td><td></td><td>Btech</td></tr>
+<tr><td>2. </td><td>XYZ</td><td></td></tr>
+<tr><td>3. </td><td>PQR</td><td>MBA</td></tr>
+</table>
+<br/>
+
+<!------------------------Define auto, fixed or initial table layout ----------------------->
+<h3>Define auto, fixed or initial table layout </h3>
+<table  class="fixed tbl1">
+<tr><th>S. No.</th><th>Name</th><th>Course</th></tr>
+<tr><td>1. </td><td>ABC</td><td>Btech</td></tr>
+<tr><td>2. </td><td>XYZ</td><td>BCA</td></tr>
+<tr><td>3. </td><td>PQR</td><td>MBA</td></tr>
+</table>
+<br/>
+<table  class="auto tbl1">
+<tr><th>S. No.</th><th>Name</th><th>Course</th></tr>
+<tr><td>1. </td><td>ABC</td><td>Btech</td></tr>
+<tr><td>2. </td><td>XYZ</td><td>BCA</td></tr>
+<tr><td>3. </td><td>PQR</td><td>MBA</td></tr>
+</table>
+<br/>
+
+<!--------------------------Set only horizontal borders for a table ------------------------>
+<h3> Set only horizontal borders for a table</h3>
+<br/>
+<table class="tbl3">
+<tr><th>S. No.</th><th>Name</th><th >Course</th></tr>
+<tr><td>1. </td><td>ABC</td><td >Btech</td></tr>
+<tr><td>2. </td ><td>XYZ</td><td >BCA</td></tr>
+<tr><td>3. </td><td >PQR</td><td >MBA</td></tr>
+</table>
+<!--------------------------- Create table cells with a hover effect------------------------>
+<h3>Create table cells with a hover effect</h3>
+<br/>
+
+<!------------------------------------Specify table colors --------------------------------->
+<h3>Specify table colors </h3>
+<br/>
+
+<!---------------------------Create a zebra-striped table design --------------------------->
+<h3>Create a zebra-striped table design </h3>
+<br/>
+
+</body>
+</html>

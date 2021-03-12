@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+#box{
+border:5px solid red;
+text-align:center;
+padding: 20px;
+margin: 80px;
+}
+
+#box1{
+width: 300px;
+height: 100px;
+border:2px solid green;
+text-align:center;
+padding: 20px;
+box-sizing:border-box;
+
+}
+#box2{
+width: 300px;
+height: 100px;
+border:2px solid blue;
+text-align:center;
+padding: 20px;
+}
+
+#box3{
+width: 300px;
+height: 100px;
+border:2px solid orange;
+text-align:center;
+padding: 20px;
+box-sizing:border-box;
+}
+
+/* Apply box-sizing: border-box to all elements at once
+
+        *{
+           box-sizing:border-box;
+         }
+
+*/
+#box4{
+width: 200px;
+height: 100px;
+border:2px solid purple;
+text-align:center;
+padding: 20px;
+resize:horizontal;
+overflow:auto;
+}
+
+#box5{
+width: 200px;
+height: 100px;
+border:2px solid purple;
+text-align:center;
+padding: 20px;
+resize:vertical;
+overflow:auto;
+}
+#box6{
+width: 200px;
+height: 100px;
+border:2px solid black;
+text-align:center;
+padding: 20px;
+resize:both;
+overflow:auto;
+}
+#box7{
+width: 200px;
+height: 100px;
+border:2px solid yellow;
+padding: 20px;
+resize:none;
+}
+
+
+</style>
+</head>
+<body>
+<!----------------------Set all CSS properties that make up CSS box model------------------->
+<h3>Set all CSS properties that make up CSS box model</h3>
+<div id="box"> I'm just some text </div>
+
+<!------------------- Compare elements with and without padding ------------------->
+<h3>Compare elements with and without padding</h3>
+<div id="box1"> </div>
+<div id="box2"> This div is bigger because it has a padding</div>
+
+<!------------------- Add box-sizing: border-box to manage dimensions of certain elements ------------------->
+<h3>Add box-sizing: border-box to manage dimensions of certain elements</h3>
+<div id="box1"> </div>
+<div id="box3"> They're the same size now!</div>
+
+<!------------------- Create an element with resizable width ------------------->
+<h3>Create an element with resizable width</h3>
+<div id="box4"> Hello, I'm just some text</div>
+
+<!------------------- Create an element with resizable height------------------->
+<h3>Create an element with resizable height</h3>
+<div id="box5"> Hello, I'm just some text</div>
+
+<!------------------- Create an element with resizable width and height ------------------->
+<h3>Create an element with resizable width and height</h3>
+<div id="box6"> Hello, I'm just some text</div>
+
+<!------------------- Disable resizing on elements that are resizable by default------------------->
+<h3>Disable resizing on elements that are resizable by default</h3>
+<textarea id="box7"> Hello, I'm just some text</textarea>
+
+</body>
+</html>

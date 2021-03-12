@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="// http://css-plus.com/2013/10/create-your-own-jquery-image-slider/"></script>
+<style type="css/text"></style>
+  <style>
+  .cS-hidden {
+    height: 1px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    overflow: hidden;
+}
+  .item-a { width:200px; }
+.item-b { width:340px; }
+.item-c { width:290px; }
+.item-d { width:220px; }
+.item-e { width:350px; }
+@media (max-width: 768px) {
+    .item-a { width:100px; }
+    .item-b { width:240px; }
+    .item-c { width:190px; }
+    .item-d { width:120px; }
+    .item-e { width:250px; }
+}
+  </style>  
+</head>
+<body>
+ <ul id="autoWidth" class="cs-hidden">
+  <li class="item-a"></li>
+  <li class="item-b"></li>
+  <li class="item-c"></li>
+  <li class="item-d"></li>
+  <li class="item-e"></li>
+</ul>
+
+<script >
+ $(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        } 
+    });  
+  });
+</script>
+    
+</body>
+</html>

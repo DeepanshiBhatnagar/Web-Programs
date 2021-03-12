@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  width:140px;
+  padding: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  font-size: 15px;
+  width: 130px;
+  padding: 5px 5px 5px 15px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 180px;
+  overflow: auto;
+  font-size:12px;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+<body>
+
+<h2>Search/Filter Dropdown</h2>
+<p>Click on the button to open the dropdown menu, and use the input field to search for a specific dropdown link.</p>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"> <input type="text" placeholder="&#128269;Search.." id="myInput" onkeyup="filterFunction()"></button>
+  <div id="myDropdown" class="dropdown-content">
+	  <a href="http://164.164.240.39/HOMEPAGE/stpi/MOA-CBS.pdf?sm=a2" > MOA of CBS</a >
+	  <a href="http://164.164.240.39/HOMEPAGE/stpi/RCBS.pdf?sm=a3" > Rules for CBS</a >
+      <a href="http://164.164.240.39/HOMEPAGE/stpi/qul_policy.html?" >  Quality Policy</a >
+      <a href="http://164.164.240.39/HOMEPAGE/stpi/sec_policy.html?sm=sec" > Security Policy</a >
+      <a href="http://164.164.240.39/HOMEPAGE/stpi/vision.html?sm=d" > Vision</a > 
+      <a href="http://164.164.240.39/HOMEPAGE/stpi/mission.html?sm=e" >  Mission</a >
+      <a href="http://164.164.240.39HOMEPAGE/stpi/values.html?sm=f" >  Values</a >
+	  <a href="http://164.164.240.39/utilities/HolidayList2020.pdf?sm=j" > List of Holidays 2020</a >
+      <a href="http://164.164.240.39/utilities/OfficeOrder2-12-2017.pdf?sm=i" >Office Order No.58/2017</a > 
+      <a href="http://164.164.240.39/utilities/RH2020list.pdf?sm=g" >Restricted Holidays 2020</a > 
+	  <a href="http://164.164.240.39/utilities/Circular05-2018.pdf?sm=K" >Circular No. 05/2018 </a > 
+      <a href="http://164.164.240.39/utilities/NotingsHQ.pdf?sm=g1">Hindi Notings</a > 
+      <a href="http://164.164.240.39/utilities/eview1.asp?ecode=STPO342&sm=l" > Personal Information </a >
+      <a href="http://164.164.240.39/utilities/sixthpayslip.asp?ecode=STPO342&sm=m" >Pay Slip</a >
+	  <a href="http://164.164.240.39/utilities/changepassword.html?sm=n" >  Change Password</a > 
+      <a href="http://164.164.240.39/utilities/employee_salary.asp?ecode=STPO342&sm=o" > Consolidated Salary </a >
+      <a href="http://164.164.240.39/utilities/loan.html?sm=p" >Loan</a >
+      <a href="http://164.164.240.39/utilities/claims/misc/index.htm?sm=q" >Claims</a >
+      <a href="http://164.164.240.39/utilities/leave/source/index.asp?sm=r" >Leaves</a > 
+      <a href="http://164.164.240.39/utilities/pfstat.idc?ecode=STPO342&sm=s" >  PF Statement</a >
+      <a href="http://164.164.240.39/utilities/incometax/menu/index.htm?ecode=STPO342&sm=t" > Income Tax </a >
+      <a href="http://164.164.240.39/utilities/photo/STPO342.htm?sm=u" > R & A</a >
+      <a href="http://164.164.240.39/utilities/emp_display_internel_info.asp?cboorder_type=Circulars&cboyear=A&cbomonth=A&ecode=rs3(ecode)&edept=Server.URLEncode(rs3(edept))&sm=v" > Circulars </a > 
+      <a href="http://164.164.240.39/utilities/emp_display_internel_info.asp?cboorder_type=Office%20Order&cboyear=A&cbomonth=A&ecode=rs3(ecode)&edept=Server.URLEncode(rs3(edept))&sm=w" target="_self" > Office Orders </a > 
+	  <a href="http://164.164.240.39/utilities/emp_display_internel_info.asp?cboorder_type=Meetings&cboyear=A&cbomonth=A&ecode=rs3(ecode)&edept=Server.URLEncode(rs3(edept))&sm=w01" >Meetings </a >
+      <a href="http://164.164.240.39/utilities/visitorsbook.asp?sm=w03" >What Others Say</a >
+	  <a href="/library/browse/brows.htm?sm=x" >Catalogue</a >
+      <a href="http://164.164.240.39/utilities/emp_details.asp?sm=y" >Employee</a >
+      <a href="http://164.164.240.39/utilities/visitors/aspfiles/visitors.asp?sm=z" > Telephone Directory </a > 
+      <a href="http://164.164.240.39/utilities/birth_details.asp?sm=k" > Birthday Details</a > 
+	  <a href="http://164.164.240.39/about_pressroom.htm?sm=h1" > News/Press & Publications </a > 
+      <a href="http://164.164.240.39/utilities/vr.idc?sm=h1" >Vehicle Request</a > 
+      <a href="http://164.164.240.39/inventory/mms/InternalIssue/tab_frameset.html?sm=i1" >Internal Issue</a > 
+      <a  href="/inventory/mms/gatepass/tab_frameset.html?sm=j1" > Gate Pass</a >
+	  <a href="http://164.164.240.39/inventory/Indentforstationary/newindent4.htm?sm=k1" > Indent for Stationary </a >
+      <a href="http://164.164.240.39/ISO-QMS/guide/tips.html?sm=n1" > Tips for Auditor</a > 
+      <a href="http://164.164.240.39/ISO-QMS/guide/qwork.html?sm=o1" > Quality @ Work</a >
+      <a href="http://164.164.240.39/utilities/Photogallery/page.asp?sm=e1" >  Photo Gallary</a > 
+      <a href="http://164.164.240.39/utilities/company/aspfiles/tab_frameset.html?sm=s2" >  Company Contacts</a > 
+      <a href="http://164.164.240.39/utilities/Circulars/tab_frameset.html?sm=s3" > Internal Info</p > </a >
+	  <a href="http://164.164.240.39/utilities/downloads/CustomerRequestForm.doc?sm=t1" > Software Requirements</a >
+      <a href="http://164.164.240.39/utilities/downloads/HrDept.html?sm=v1" >  Personnel Claims</a >  
+      <a href="http://164.164.240.39/utilities/IMG/IMGServiceRequestNew.docx?sm=y1" >User Change Request</a >      
+      <a href="http://164.164.240.39/utilities/IMG/UserEntryForm.doc?sm=z1" > User Entry Form</a >
+	  <a href="http://164.164.240.39/utilities/IMG/UserExitForm.doc?sm=z13" >User Exit Form</p > </a >
+	  <a href="http://164.164.240.39/utilities/Downloads/VSG-01-FO-01.doc?sm=z14" >VSG Service Request Form</a >
+	  <a href="http://164.164.240.39/utilities/Downloads/Intranetaccess.doc?sm=z12" > Intranet Authorization Form</a >
+	  <a href="http://164.164.240.39/utilities/Downloads/ElectricalRequisation.doc?sm=z23" > Electrical Requisation Form</a >
+	  <a href="http://164.164.240.39/utilities/Downloads/IndustrialVisitRequest.doc?sm=z22" > Industrial Visit Request Form</a >	  
+	  <a href="http://164.164.240.39/utilities/Downloads/Outward.doc?sm=z20" >Library Books Indent Form</a >
+	  <a href="http://164.164.240.39/utilities/Downloads/Outward.doc?sm=z20" > Outward Form</a >
+	  <a href="http://164.164.240.39/utilities/Downloads/OutwardReturnable.doc?sm=z19" > Outward Returnable Form</a >
+	  <a href="http://164.164.240.39/utilities/Downloads/PRFormat2018-1.docx?sm=z18" > Requisition Format-Purchase[PR]/Works[WR]/Miscellaneous[MR</p > </a >
+	  <a href="http://164.164.240.39/utilities/Downloads/PRFormat2018-1.pdf?sm=z17" >Requisition Format(PDF)-Purchase[PR]/Works[WR]/Miscellaneous[MR</p > </a >
+	  <a href="http://164.164.240.39/utilities/Downloads/StationaryRequisition.doc?sm=z16" > Stationary Requisition Form</a >
+	  <a href="http://164.164.240.39/utilities/Downloads/WebsiteIndent.doc?sm=z11" > Website Hosting Form</a >
+	  <a href="http://164.164.240.39/utilities/Downloads/MedicalDeclaration.doc?sm=md1" >Medical Declaration</a >
+	  <a href="http://164.164.240.39/Downloads/FamilyDeclaration.doc?sm=fd1" > Family Declaration</a >
+      <a href="http://164.164.240.39/utilities/Downloads/GSLIS.doc?sm=gs1" >GSLIS</a >
+	  <a href="http://164.164.240.39/utilities/Downloads/LTC.doc?sm=ltc" > LTC</a >
+	  <a href="http://164.164.240.39/utilities/downloads/officeorder.html?sm=of1" > Office Orders</a >
+	  <a href="http://164.164.240.39/utilities/downloads/TLAllownce.pdf?sm=of2" >Travelling Allowance </a > 
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

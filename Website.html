@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<script type="text/javascript" src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css">
+<style>
+
+*{
+  box-sizing: border-box;
+}
+body{
+font-family: Arial;
+  margin: 0;
+}
+
+p{margin: 0;}
+
+h2{
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.header{
+  width: 100%;
+  height:300px;
+  padding: 100px;
+  text-align: center;
+  color: white;
+  background-image: url('https://1r65612jvqxn8fcup46pve6b-wpengine.netdna-ssl.com/wp-content/uploads/2016/04/clear-impact-state-government-background-header-300x89.jpg');
+  background-size: cover;
+}
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.navbar a{
+
+  padding: 10px 70px;
+  text-decoration: none;
+  background-color:#80ffaa;  
+  color: black;
+  text-align:center;
+}
+.navbar a:hover{
+  background-color: #00b33c;
+  color: white;
+  cursor: pointer;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}  
+.col{
+  flex: 33%;
+  text-align: center;
+  padding: 10px;
+}
+.col_content{
+  padding: 15px;
+}
+.sidebar{
+  flex: 33%;
+  padding: 10px;
+  
+}
+.article{
+  padding: 10px;
+  flex: 67%;
+}
+.footer{
+  background-color: gray;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+@media screen and (max-width: 1000px){
+  .row, .navbar, .col{
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header"><h1>HEADER</h1></div>
+
+<!-- Navigation Bar -->
+
+<div class="navbar">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
+
+<!-- Flexible columns -->
+<div class="row">
+  <div class="col">
+    <div class="col_content">
+	<h2>Column 1</h2>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+	</div>
+  </div>
+  
+  <div class="col">
+    <div class="col_content">
+	<h2>Column 2</h2>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+	</div>
+  </div>
+  
+  <div class="col">
+    <div class="col_content">
+	<h2>Column 3</h2>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+	</div>
+  </div>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+<div class="sidebar">
+<h2>Sidebar</h2>
+<h5>Some random image:</h5>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+</div>
+
+<div class="article">
+<h2>ARTICLE TITLE</h2>
+<h5>Nov 22, 2018</h5>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <h3>Footer</h3>
+</div>
+
+</body>
+</html>

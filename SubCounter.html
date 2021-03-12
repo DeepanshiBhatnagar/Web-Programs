@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+body{
+ counter-reset: chapter;
+}
+h1{
+ counter-reset: subChapter
+}
+h1::before{
+  counter-increment : chapter;
+  content: "Chapter "  counter(chapter) " : ";
+}
+h2::before{
+  counter-increment : subChapter;
+  content : counter(chapter) "." counter(subChapter) " : ";
+}
+</style>
+</head>
+
+<body>
+<h3> Make a table of contents using CSS counters</h3>
+<br/>
+	<h1>HTML</h1>
+	   <h2>This is a subchapter</h2>
+	   <h2>This is also</h2>
+	<h1>CSS</h1>
+	    <h2>One more subchapter</h2>
+	    <h2>Last subchapter</h2>
+	<h1>JavaScript</h1>
+	    <h2>Last subchapter</h2>
+	    <h2>Okay, I lied. This is the last subchapter
+</body>
+
+</html>

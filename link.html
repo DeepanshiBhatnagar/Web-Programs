@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+a{
+  color:white;
+}
+a:link{
+  text-decoration: none;
+  background-color: blue;
+}
+a:visited{
+  text-decoration: none;
+  background-color: green;
+  }
+a:hover{
+  text-decoration: underline;
+  background-color: yellow;
+}
+a:active{
+  text-decoration: underline;
+  background-color: pink;
+}
+
+.btn{
+  border: none;
+  width:100px;
+  text-align:center;
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+}
+.btn:active, .btn:hover{
+  background-color: pink;
+}
+</style>
+</head>
+<body>
+<!---------------------- Links------------------->
+<h3>Links </h3>
+<a href="https://jsbin.com" target=_blank >Click here</a>
+<br/>
+<!---------------------- Make your link a CSS button------------------->
+<h3>Make your link a CSS button</h3>
+<a href="https://jsbin.com" target=_blank ><p class="btn">Click here</p></a>
+</body>
+</html>

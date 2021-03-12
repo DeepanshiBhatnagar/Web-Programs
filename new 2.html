@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>HomePage 3</title>
+ <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer ></script>
+	<title>jQuery image slider - Demo - CSS-Plus</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+				
+	<style>
+	.gallery-wrap { margin: 0 auto; overflow: hidden; width: 732px; }
+.gallery { position: relative; left: 0; top: 0; }
+.gallery__item { float: left; list-style: none; margin-right: 20px; }
+.gallery__img { display: block; border: 4px solid #40331b; height: 175px; width: 160px; }
+
+.gallery__controls { margin-top: 10px; }
+.gallery__controls-prev { cursor: pointer; float: left; }
+.gallery__controls-next { cursor: pointer; float: right; }
+
+
+/
+	</style>
+</head>
+<body>
+
+   <p id="text">dog</p>
+   <button id="left" style = "width: 50px; background-color:gold" onclick="getNext">PREV</button>
+   <button id="right" style = "width: 50px; background-color:tomato" onclick="getNext">NEXT</button>
+   <script>var message = ["dog", "cat", "bear", "penguin", "tiger", "eagle", "John Doe"],
+        pel = document.getElementById("text"),
+        idx = 0,
+    getNext = e => pel.innerText = e.target.id == "right" ? message[idx = ++idx%message.length]
+                                                          : message[idx = (message.length - (message.length - --idx)%message.length)%message.length];
+document.getElementById("right").onclick = getNext;
+document.getElementById("left").onclick = getNext;</script>
+
+<div class="container text-center my-3">
+    <h3>Bootstrap 4 Multiple Item Carousel</h3>
+    <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+        <div class="carousel-inner w-100" role="listbox">
+            <div class="carousel-item row no-gutters active">
+                <div class="col-3 float-left"><img class="img-fluid" src="https://pbs.twimg.com/media/EMEW_yxU0AALJYQ?format=jpg&name=small"></div>
+                <div class="col-3 float-left"><img class="img-fluid" src="https://pbs.twimg.com/media/EFtgTNbU4AI3IRv?format=jpg&name=4096x4096"></div>
+                <div class="col-3 float-left"><img class="img-fluid" src="https://pbs.twimg.com/media/EMEW_yxU0AALJYQ?format=jpg&name=small"></div>
+                <div class="col-3 float-left"><img class="img-fluid" src="https://pbs.twimg.com/media/EFtgTNbU4AI3IRv?format=jpg&name=4096x4096"></div>
+            </div>
+            <div class="carousel-item row no-gutters">
+                <div class="col-3 float-left"><img class="img-fluid" src="https://pbs.twimg.com/media/EFtgTNbU4AI3IRv?format=jpg&name=4096x4096"></div>
+                <div class="col-3 float-left"><img class="img-fluid" src="https://pbs.twimg.com/media/EMEW_yxU0AALJYQ?format=jpg&name=small"></div>
+                <div class="col-3 float-left"><img class="img-fluid" src="https://pbs.twimg.com/media/EFtgTNbU4AI3IRv?format=jpg&name=4096x4096"></div>
+                <div class="col-3 float-left"><img class="img-fluid" src="https://pbs.twimg.com/media/EFtgTNbU4AI3IRv?format=jpg&name=4096x4096"></div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+  </body>
+
+</html>

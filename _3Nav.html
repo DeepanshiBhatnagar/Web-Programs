@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+
+ul{
+  margin: 0;
+  padding: 0;
+  background-color:  #8842d5;
+  list-style-type: none;
+  color: white;
+}
+li{
+  display: inline-block;   /* OR  float:left; */
+}
+li a{
+  display: block;
+  color:white;
+  text-decoration: none;
+  padding: 9px 17px;
+  font-weight: bold;
+}
+ li a:hover{
+ background-color: #7300ff;
+ color: black;
+}
+li a:active {
+    background-color: #ff00aa;
+    color: black;
+}
+
+.active{
+ background-color: red;
+ color: white;
+ float: right;
+}
+</style>
+</head>
+
+<body>
+<h3> Specify the style for your active navigation links<br/><br/>
+Create a horizontal navigation bar<br/><br/>
+Create a horizontal navigation bar using float<br/><br/>
+Create a horizontal navbar with a changing color upon hover</h3>
+<ul class="nav2">
+<li><a href=" https://jsbin.com/?js,console" target="_blank">Link 1</a></li>
+<li><a href=" https://jsbin.com/?js,console" target="_blank">Link 2</a></li>
+<li><a href=" https://jsbin.com/?js,console" target="_blank">Link 3</a></li>
+<li><a href=" https://jsbin.com/?js,console" target="_blank">Link 4</a></li>
+</ul>
+<br/>
+<h3>Align navigation links to the right</h3>
+<br/>
+<ul class="nav2">
+<li><a href=" https://jsbin.com/?js,console" target="_blank">Link 1</a></li>
+<li><a href=" https://jsbin.com/?js,console" target="_blank">Link 2</a></li>
+<li><a href=" https://jsbin.com/?js,console" target="_blank">Link 3</a></li>
+<li class="active"><a href=" https://jsbin.com/?js,console" target="_blank">Link 4</a></li>
+</ul>
+</body>
+
+</html>

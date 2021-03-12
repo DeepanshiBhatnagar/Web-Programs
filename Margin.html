@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js"></script>
+	<link rel="stylesheet" href="styles.css">
+<style>	
+div {
+ background-color: #efefef; 
+ border: 1px solid #efefef;
+}
+
+#p1 { 
+    margin-top: 40px;   
+    margin-bottom: 70px;   
+    margin-right: 140px;   
+    margin-left: 90px;
+	
+    width: auto;
+    background-color: white;
+    border: 2px solid #e9385a;
+    text-align: center;
+}
+
+#p2{
+margin: 30px 40px 50px 60px;
+border: 2px solid blue;
+text-align: center;
+}
+
+#p3{
+margin: 30px 10px 60px;
+border: 2px solid blue;
+text-align: center;
+}
+
+#p4{
+margin: 30px 60px;
+border: 2px solid blue;
+text-align: center;
+}
+
+#p5{
+margin: 30px;
+border: 2px solid blue;
+text-align: center;
+}
+
+#p6{
+width:300px;
+margin: auto;
+border: 20px solid orange;
+text-align: center;
+}
+
+.bg {
+ background-color: #efefef; 
+ border: 1px solid black;
+}
+
+.contain {
+ border: 5px solid #e9385a;
+ background-color: white;
+ margin-left: 100px;
+}
+
+.write {
+ margin-left: inherit;
+ 
+}
+
+.p8 {
+    width: auto;
+    background-color: white;
+    border: 2px solid #e9385a;
+    text-align: center;
+}
+#d1 {
+    background-color: #efefef; 
+    border: 1px solid #efefef;
+}
+#paragraph-one {
+    margin: 0 0 70px 0;
+}
+#paragraph-two {
+    margin: 50px 0 0 0;
+}
+</style>
+
+</head>
+
+<body>
+	
+<!----------------- Specify all individual CSS margin values separately ----------------->
+	<h3>Specify all individual CSS margin values separately</h3>
+	<div>
+		<p id="p1">I have margins!</p>
+	</div>
+	<hr/>
+	
+<!------------------------- Determine four different CSS margin values ----------------->
+	<h3>Determine four different CSS margin values</h3>
+	<div>
+	   <p id="p2">I have Margin</p>
+	</div>
+<!---------------------------- Determine three CSS margin values ----------------------->
+	<h3>Determine three CSS margin values</h3>
+		<div>
+	   <p id="p3">I have Margin</p>
+	</div>
+<!------------------------ Determine only two CSS margin values ------------------------>
+	<h3>Determine only two CSS margin values</h3>
+		<div>
+	   <p id="p4">I have Margin</p>
+	</div>
+<!----------------- Define just one value for all margins to be equal ------------------>
+	<h3>Define just one value for all margins to be equal</h3>
+    <div>
+	   <p id="p6">I have Margin</p>
+	</div>
+<!--------------------------- Set CSS margin to inherit its value --------------------->
+	<h3>Set CSS margin to inherit its value</h3>
+    <div class="bg">
+       <div class="contain">I’m in a div that has a big margin!<p class="write">I have the same margin, too!</p></div>
+    </div>
+<!-------------------------------- Collapse vertical margins -------------------------->
+	<h3>Collapse vertical margins</h3>
+    <div id="d1">
+		<p id="paragraph-one" class="p8">I have a bottom margin.</p>
+		<p id="paragraph-two" class="p8">I have a top margin.</p>
+	</div>
+
+</body>
+
+</html>

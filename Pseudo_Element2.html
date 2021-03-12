@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+	
+	::selection {       /*Style a specified portion of an element*/
+    color: green;
+    background: blue;
+}
+div::first-letter { 
+    color: limegreen; 
+}
+h1::before { 
+ content: url(https://cdn.bitdegree.org/learn/smiling-face-with-open-mouth.png); 
+}
+a::after { 
+ content: url(https://cdn.bitdegree.org/learn/smiling-face-with-open-mouth.png); 
+}
+</style>
+</head>
+
+<body>
+<div>The ::first-letter pseudo-element allows you to add a special effect to the first letter of a text.</div>
+<h1>Set style for the first letter</h1>
+<a href="https://www.bitdegree.org/">Insert specific content after an element</a>
+</body>
+
+</html>
